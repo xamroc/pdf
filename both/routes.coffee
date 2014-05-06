@@ -2,4 +2,5 @@ Router.configure
   layoutTemplate: 'layout'
 
 Router.map ->
-  @.route 'recommendationsList', { path: '/' }
+  @.route 'main', { path: '/' }
+  @.route 'recommendationsList', { path: '/recommendations' }
