@@ -3,3 +3,4 @@ Router.configure
 
 Router.map ->
   @.route 'main', { path: '/' }
+  @.route 'recommendationsList', { path: '/recommendations' }
