@@ -15,6 +15,8 @@ if Recommendations.find().count() is 0
     title: 'Wine'
     description: 'Cabernet Sauvignon'
     price: 'HKD 400'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
 
   Presents.insert
     recommendationId: rec2Id
@@ -22,6 +24,8 @@ if Recommendations.find().count() is 0
     title: 'Chocolate'
     description: 'Aguis Chocolate'
     price: 'HKD 400'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
 
   Presents.insert
     recommendationId: rec3Id
@@ -29,6 +33,8 @@ if Recommendations.find().count() is 0
     title: 'Ring'
     description: 'Ring Mabelle'
     price: 'HKD 1400'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
 
   Dinners.insert
     recommendationId: rec1Id
@@ -36,6 +42,8 @@ if Recommendations.find().count() is 0
     title: 'Delaney Restaurant'
     description: 'Romantic dinner'
     price: 'HKD 600'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
 
   Dinners.insert
     recommendationId: rec2Id
@@ -43,6 +51,8 @@ if Recommendations.find().count() is 0
     title: 'Paisano Pizza'
     description: 'Huge pizza'
     price: 'HKD 200'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
 
   Dinners.insert
     recommendationId: rec3Id
@@ -50,6 +60,8 @@ if Recommendations.find().count() is 0
     title: 'The Globe'
     description: 'Romantic Bar for two'
     price: 'HKD 1200'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
 
   Flowers.insert
     recommendationId: rec1Id
@@ -57,6 +69,8 @@ if Recommendations.find().count() is 0
     title: 'Rose'
     description: 'Red color'
     price: 'HKD 300'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
 
   Flowers.insert
     recommendationId: rec2Id
@@ -64,6 +78,8 @@ if Recommendations.find().count() is 0
     title: 'Bouvardia'
     description: 'Smell like sweet perfume'
     price: 'HKD 700'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
 
   Flowers.insert
     recommendationId: rec3Id
@@ -71,3 +87,5 @@ if Recommendations.find().count() is 0
     title: 'Lavendar'
     description: 'Twilight mixed flower'
     price: 'HKD 500'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
