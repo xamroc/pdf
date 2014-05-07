@@ -3,7 +3,7 @@
 
 // --------------  Frame options ---------------
 
-BrowserPolicy.framing.disallow();
+// BrowserPolicy.framing.disallow();
 //BrowserPolicy.framing.restrictToOrigin('http://origin.com');
 //BrowserPolicy.framing.allowAll();
 
@@ -11,7 +11,7 @@ BrowserPolicy.framing.disallow();
 // -------------  Content options  -------------
 
 //BrowserPolicy.content.allowInlineScripts();
-BrowserPolicy.content.disallowInlineScripts();
+// BrowserPolicy.content.disallowInlineScripts();
 //BrowserPolicy.content.allowEval();
 //BrowserPolicy.content.disallowEval(); // default
 //BrowserPolicy.content.allowInlineStyles() // default
