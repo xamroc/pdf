@@ -5,8 +5,10 @@
 
 standard-app-packages
 iron-router
-browser-policy
 bootstrap-3
 coffeescript
 accounts-ui-bootstrap-3
 accounts-password
+accounts-facebook
+service-configuration
+browser-policy
