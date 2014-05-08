@@ -1,16 +1,6 @@
 if Recommendations.find().count() is 0
 
-  rec1Id = Recommendations.insert
-    name: "Rec for User 1"
-
-  rec2Id = Recommendations.insert
-    name: "Rec for User 2"
-
-  rec3Id = Recommendations.insert
-    name: "Rec for User 3"
-
-  Presents.insert
-    recommendationId: rec1Id
+  wineId = Presents.insert
     location: 'Central'
     title: 'Wine'
     description: 'Cabernet Sauvignon'
@@ -18,8 +8,7 @@ if Recommendations.find().count() is 0
     vendor: 'Vendor'
     phonenumber: '1278 7897'
 
-  Presents.insert
-    recommendationId: rec2Id
+  chocoId = Presents.insert
     location: 'Admiralty'
     title: 'Chocolate'
     description: 'Aguis Chocolate'
@@ -27,8 +16,7 @@ if Recommendations.find().count() is 0
     vendor: 'Vendor'
     phonenumber: '1278 7897'
 
-  Presents.insert
-    recommendationId: rec3Id
+  ringId = Presents.insert
     location: 'Cyberport'
     title: 'Ring'
     description: 'Ring Mabelle'
@@ -36,8 +24,7 @@ if Recommendations.find().count() is 0
     vendor: 'Vendor'
     phonenumber: '1278 7897'
 
-  Dinners.insert
-    recommendationId: rec1Id
+  delaneyId = Dinners.insert
     locationId: 'Central'
     title: 'Delaney Restaurant'
     description: 'Romantic dinner'
@@ -45,8 +32,7 @@ if Recommendations.find().count() is 0
     vendor: 'Vendor'
     phonenumber: '1278 7897'
 
-  Dinners.insert
-    recommendationId: rec2Id
+  pizzaId = Dinners.insert
     locationId: 'Admiralty'
     title: 'Paisano Pizza'
     description: 'Huge pizza'
@@ -54,8 +40,7 @@ if Recommendations.find().count() is 0
     vendor: 'Vendor'
     phonenumber: '1278 7897'
 
-  Dinners.insert
-    recommendationId: rec3Id
+  globeId = Dinners.insert
     locationId: 'Cyberport'
     title: 'The Globe'
     description: 'Romantic Bar for two'
@@ -63,8 +48,7 @@ if Recommendations.find().count() is 0
     vendor: 'Vendor'
     phonenumber: '1278 7897'
 
-  Flowers.insert
-    recommendationId: rec1Id
+  roseId = Flowers.insert
     locationId: 'Central'
     title: 'Rose'
     description: 'Red color'
@@ -72,8 +56,7 @@ if Recommendations.find().count() is 0
     vendor: 'Vendor'
     phonenumber: '1278 7897'
 
-  Flowers.insert
-    recommendationId: rec2Id
+  bouId = Flowers.insert
     locationId: 'Admiralty'
     title: 'Bouvardia'
     description: 'Smell like sweet perfume'
@@ -81,11 +64,28 @@ if Recommendations.find().count() is 0
     vendor: 'Vendor'
     phonenumber: '1278 7897'
 
-  Flowers.insert
-    recommendationId: rec3Id
+  lavId = Flowers.insert
     locationId: 'Cyberport'
     title: 'Lavendar'
     description: 'Twilight mixed flower'
     price: 'HKD 500'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
+
+  rec1Id = Recommendations.insert
+    name: "Rec for User 1"
+    presentId: wineId
+    dinnerId: delaneyId
+    flowerId: roseId
+
+  rec2Id = Recommendations.insert
+    name: "Rec for User 2"
+    presentId: chocoId
+    dinnerId: pizzaId
+    flowerId: bouId
+
+  rec3Id = Recommendations.insert
+    name: "Rec for User 3"
+    presentId: ringId
+    dinnerId: globeId
+    flowerId: lavId

@@ -3,23 +3,24 @@
   <div>
     {{#each recommendations}}
       {{> recommendationItem}}
-        <ul>Your Present
-          {{#each presents}}
-            {{> present}}
-          {{/each}}
-        </ul>
-        <ul>Your Dinner
-          {{#each dinners}}
-            {{> dinner}}
-          {{/each}}
-        </ul>
-        <ul>Your Flower
-          {{#each flowers}}
-            {{> flower}}
-          {{/each}}
-        </ul>
     {{/each}}
   </div>
+
+
+  <form>
+    <div class="control-group">
+      <label class="control-label" for="location">Location</label>
+      <div class="controls">
+        <input name="location" type="text" placeholder="Your location" />
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <input type="submit" value="Submit" class="btn btn-primary submit"/>
+      </div>
+    </div>
+  </form>
+
 
   <h1>List of all presents</h1>
   <div>
