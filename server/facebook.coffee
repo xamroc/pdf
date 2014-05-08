@@ -30,10 +30,12 @@ class Facebook
     @query '/me/friends'
 
 Meteor.methods
-  getUserData: ->
-    fb = new Facebook Meteor.user().services.facebook.accessToken
+  getUserData: (user) ->
+    fb = new Facebook user.services.facebook.accessToken
     data = fb.getUserData()
 
-  getFriendsData: ->
-    fb = new Facebook Meteor.user().services.facebook.accessToken
+  updateFriendsList: (user) ->
+    fb = new Facebook user.services.facebook.accessToken
     data = fb.getFriendsData()
+    ids = _.map data.data, (friend) ->
+      Meteor.users.find({"services.facebook.id": friend.id}).fetch()[0]._id
