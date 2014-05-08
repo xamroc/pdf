@@ -1,4 +1,3 @@
-
 Template.recommendationsList.helpers
 
   recommendations: ->

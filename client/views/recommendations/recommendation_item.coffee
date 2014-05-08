@@ -12,6 +12,8 @@ Template.recommendationItem.events
     e.preventDefault()
 
     Recommendations.find().fetch()[0]
-    console.log @._id
+    recId = @._id
+    console.log recId
+
 
 
