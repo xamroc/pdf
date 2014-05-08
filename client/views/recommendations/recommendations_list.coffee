@@ -22,10 +22,4 @@ Template.recommendationsList.helpers
   allFlowers: ->
     Flowers.find()
 
-  presentTitle: ->
-    recId = Recommendations.findOne().presentId
-    console.log 'recId', recId
-    Presents.find(recId).fetch()[0].title
-
-Template.recommendationsList.events
 
