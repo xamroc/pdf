@@ -3,12 +3,11 @@ Template.dinner.events
     e.preventDefault()
 
     Dinners.find().fetch()[0]
-    dinId= @_id
-    console.log dinId
+    dinnerId= @_id
 
-    recId = Recommendations.find().fetch()[0]
+    recommendationId = Recommendations.find().fetch()[0]
 
-    Recommendations.update {_id: recId._id}, {$set: {"dinnerId": dinId}}, (error) ->
+    Recommendations.update {_id: recommendationId._id}, {$set: {"dinnerId": dinnerId}}, (error) ->
       if error
         console.log 'Error!'
         alert(error.reason)

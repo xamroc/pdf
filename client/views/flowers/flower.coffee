@@ -3,12 +3,11 @@ Template.flower.events
     e.preventDefault()
 
     Flowers.find().fetch()[0]
-    floId= @_id
-    console.log floId
+    flowerId= @_id
 
-    recId = Recommendations.find().fetch()[0]
+    recommendationId = Recommendations.find().fetch()[0]
 
-    Recommendations.update {_id: recId._id}, {$set: {"flowerId": floId}}, (error) ->
+    Recommendations.update {_id: recommendationId._id}, {$set: {"flowerId": flowerId}}, (error) ->
       if error
         console.log 'Error!'
         alert(error.reason)
