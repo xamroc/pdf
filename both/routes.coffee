@@ -5,6 +5,7 @@ Router.configure
     Meteor.subscribe 'presents'
     Meteor.subscribe 'dinners'
     Meteor.subscribe 'flowers'
+    Meteor.subscribe 'friends'
 
 Router.map ->
   @.route 'main', { path: '/' }

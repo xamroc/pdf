@@ -9,3 +9,8 @@ Meteor.publish "dinners", ->
 
 Meteor.publish "flowers", ->
   Flowers.find()
+
+Meteor.publish "friends", ->
+  if @userId
+    friendList = Meteor.users.findOne(@userId).profile.friendList
+    Meteor.users.find({_id: {$in: friendList}}, {fields: {services: 0}})
