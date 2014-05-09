@@ -8,6 +8,9 @@ Template.locationEdit.created = () ->
     for location in locations
       fillOptions location.name
 
+Template.locationEdit.helpers
+  locations: () ->
+    Locations.find()
 
 Template.locationEdit.events
   'submit form': (e) ->
