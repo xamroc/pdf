@@ -8,7 +8,8 @@
       "accounts-ui-bootstrap-3": {
         "git": "https://github.com/pahans/meteor-accounts-ui-bootstrap-3.git",
         "branch": "master"
-      }
+      },
+      "scss": {}
     },
     "packages": {
       "iron-router": {
@@ -30,6 +31,11 @@
         "git": "https://github.com/pahans/meteor-accounts-ui-bootstrap-3.git",
         "branch": "master",
         "commit": "d354cb7bb9351c60999d288c4d0c5c8fe6c8be3f"
+      },
+      "scss": {
+        "git": "https://github.com/fourseven/meteor-scss.git",
+        "tag": "v0.8.4",
+        "commit": "11af0da643944d241fe7d173af76162c4b670dee"
       }
     }
   }

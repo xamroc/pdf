@@ -26,6 +26,9 @@ class Facebook
   getUserData: ->
     @query 'me'
 
+  getUserProfilePicture: ->
+    @query 'me/picture?redirect=0&type=large'
+
   getFriendsData: ->
     @query '/me/friends'
 
@@ -33,6 +36,10 @@ Meteor.methods
   getUserData: (user) ->
     fb = new Facebook user.services.facebook.accessToken
     data = fb.getUserData()
+
+  getUserProfilePicture: (user) ->
+    fb = new Facebook user.services.facebook.accessToken
+    data = fb.getUserProfilePicture()
 
   updateFriendsList: (user) ->
     fb = new Facebook user.services.facebook.accessToken
