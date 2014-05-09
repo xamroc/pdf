@@ -9,3 +9,6 @@ Meteor.publish "dinners", ->
 
 Meteor.publish "flowers", ->
   Flowers.find()
+
+Meteor.publish "locations", ->
+  Locations.find()

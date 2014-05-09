@@ -1,110 +1,83 @@
 if Locations.find().count() is 0
   Locations.insert
-    "id": "1",
     "name": "Central",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "2",
     "name": "Mid-level",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "3",
     "name": "The Peak",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "4",
     "name": "Sai Wan",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "5",
     "name": "Sheung Wan",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "6",
     "name": "Causeway Bay",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "7",
     "name": "Chai Wan",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "8",
     "name": "North Point",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "9",
     "name": "Quarry Bay",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "10",
     "name": "Sai Wan Ho",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "11",
     "name": "Shau Kei Wan",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "12",
     "name": "Siu Sai Wan",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "12",
     "name": "Aberdeen",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "13",
     "name": "Ap Lei Chau",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "14",
     "name": "Chung Hom Kok",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "15",
     "name": "Cyberport",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "16",
     "name": "Chung Hom Kok",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "17",
     "name": "Deep Water Bay",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "18",
     "name": "Pok Fu Lam",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "19",
     "name": "Repulse Bay",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "20",
     "name": "Stanley",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "21",
     "name": "Shek O",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "22",
     "name": "Tai Tam",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "23",
     "name": "Wong Chuk Hang",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "24",
     "name": "Wan Chai",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "25",
     "name": "Happy Valley",
     "area": "Hong Kong Island"
   Locations.insert
-    "id": "26",
     "name": "Tai Hang",
     "area": "Hong Kong Island"
 
