@@ -3,7 +3,7 @@ Template.present.events
     e.preventDefault()
 
     Presents.find().fetch()[0]
-    preId= @._id
+    preId= @_id
     console.log preId
 
     recId = Recommendations.find().fetch()[0]

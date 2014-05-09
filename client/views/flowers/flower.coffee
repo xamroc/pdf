@@ -3,7 +3,7 @@ Template.flower.events
     e.preventDefault()
 
     Flowers.find().fetch()[0]
-    floId= @._id
+    floId= @_id
     console.log floId
 
     recId = Recommendations.find().fetch()[0]

@@ -3,7 +3,7 @@ Template.dinner.events
     e.preventDefault()
 
     Dinners.find().fetch()[0]
-    dinId= @._id
+    dinId= @_id
     console.log dinId
 
     recId = Recommendations.find().fetch()[0]
