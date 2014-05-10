@@ -45,4 +45,8 @@ Meteor.methods
     fb = new Facebook user.services.facebook.accessToken
     data = fb.getFriendsData()
     ids = _.map data.data, (friend) ->
-      Meteor.users.find({"services.facebook.id": friend.id}).fetch()[0]._id
+      dbFriend = Meteor.users.findOne({"services.facebook.id": friend.id})
+      if dbFriend
+        dbFriend._id
+      else
+        ''
