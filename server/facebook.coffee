@@ -44,9 +44,12 @@ Meteor.methods
   updateFriendsList: (user) ->
     fb = new Facebook user.services.facebook.accessToken
     data = fb.getFriendsData()
+    datedFriends = Recommendations.find(userId: user._id).fetch().map (recommendation) ->
+      recommendation.targetId
     ids = _.map data.data, (friend) ->
       dbFriend = Meteor.users.findOne({"services.facebook.id": friend.id})
       if dbFriend
         dbFriend._id
       else
         ''
+    _.difference ids, datedFriends
