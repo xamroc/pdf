@@ -7,6 +7,24 @@ Template.editRecommendation.helpers
   currentRecommendation: ->
     Session.get 'currentRecommendation'
 
+  presents: ->
+    Presents.find recommendationId: @_id
+
+  dinners: ->
+    Dinners.find recommendationId: @_id
+
+  flowers: ->
+    Flowers.find recommendationId: @_id
+
+  allPresents: ->
+    Presents.find()
+
+  allDinners: ->
+    Dinners.find()
+
+  allFlowers: ->
+    Flowers.find()
+
 Template.editRecommendation.events
   'click #prev': (e) ->
     currentIndex = Session.get 'currentIndex'

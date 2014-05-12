@@ -2,4 +2,26 @@
   <div>
     <span class="glyphicon glyphicon-chevron-left" id="prev"></span><span><img src="{{currentRecommendation.target.profile.picture}}" alt="" class="target-profile img-circle"></span><span class="target-name">{{currentRecommendation.target.profile.name}}</span><span class="glyphicon glyphicon-chevron-right" id="next"></span>
   </div>
+
+  <div class="left-margin">
+    <h1>Recommendations for each user</h1>
+  </div>
+
+  <div>
+      {{#each allPresents}}
+        {{> present}}
+      {{/each}}
+    </div>
+
+  <div>
+    {{#each allDinners}}
+      {{> dinner}}
+    {{/each}}
+  </div>
+
+  <div>
+    {{#each allFlowers}}
+      {{> flower}}
+    {{/each}}
+  </div>
 </template>
