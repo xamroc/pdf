@@ -42,6 +42,10 @@ p {
 }
 // Color for navbar in header
 
+.navbar {
+  margin-bottom: 10px;
+}
+
 .navbar-default {
   background-color: $bgDefault;
   border: none;

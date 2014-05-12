@@ -1,10 +1,34 @@
 <template name="editRecommendation">
-  <div>
-    <span class="glyphicon glyphicon-chevron-left" id="prev"></span><span><img src="{{currentRecommendation.target.profile.picture}}" alt="" class="target-profile img-circle"></span><span class="target-name">{{currentRecommendation.target.profile.name}}</span><span class="glyphicon glyphicon-chevron-right" id="next"></span>
+  <div class="left-margin">
+    <p><span class="glyphicon glyphicon-chevron-left" id="prev"></span>
+    <img src="{{currentRecommendation.target.profile.picture}}" alt="" class="target-profile-edit img-circle">
+    <span class="target-name">{{currentRecommendation.target.profile.name}}</span>
+    <span class="glyphicon glyphicon-chevron-right" id="next"></span></p>
   </div>
 
   <div class="left-margin">
     <h1>Recommendations for each user</h1>
+    <div class="recommended-item">
+      <img src="{{image}}" alt="{{title}}" class="imagelist">
+      <div>
+        <p><span class="recommended-title">{{title}}</span><span class="price">{{price}}</span></p>
+      </div>
+    </div>
+
+    <div class="recommended-item">
+      <img src="{{image}}" alt="{{title}}" class="imagelist">
+      <div>
+        <p><span class="recommended-title">{{title}}</span><span class="price">{{price}}</span></p>
+      </div>
+    </div>
+
+    <div class="recommended-item">
+      <img src="{{image}}" alt="{{title}}" class="imagelist">
+      <div>
+        <p><span class="recommended-title">{{title}}</span><span class="price">{{price}}</span></p>
+      </div>
+    </div>
+
   </div>
 
   <div>
