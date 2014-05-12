@@ -1,9 +1,16 @@
-Meteor.call 'getRecommendationsInfo', (error, data) ->
-  Session.set 'recommendations', data
-  Session.set 'currentRecommendation', data[0]
-  Session.set 'currentIndex', 0
+Template.editRecommendation.rendered = ->
+  Meteor.call 'getRecommendationsInfo', (error, data) ->
+    Session.set 'recommendations', data
+    targetUser = Session.get 'targetUser'
+    user = if targetUser
+      _.findWhere data, {targetId: targetUser}
+    else
+      data[0]
+    Session.set 'currentRecommendation', user
+    Session.set 'currentIndex', data.indexOf user
 
 Template.editRecommendation.helpers
+
   currentRecommendation: ->
     Session.get 'currentRecommendation'
 
