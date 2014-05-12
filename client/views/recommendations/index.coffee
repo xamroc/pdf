@@ -1,4 +1,4 @@
-Template.recommendationsList.helpers
+Template.recommendations.helpers
 
   recommendations: ->
     Recommendations.find()

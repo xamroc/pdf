@@ -1,4 +1,4 @@
-Template.recommendationItem.helpers
+Template.showRecommendation.helpers
   target: ->
     Meteor.users.findOne(@targetId)
 
@@ -9,12 +9,9 @@ Template.recommendationItem.helpers
   # flower: ->
   #   Flowers.findOne(@flowerId)
 
-Template.recommendationItem.events
+Template.showRecommendation.events
   'click .activeuser': (e) ->
     e.preventDefault()
 
     Recommendations.findOne()
     recId = @._id
-
-
-
