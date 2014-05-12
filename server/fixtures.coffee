@@ -154,21 +154,3 @@ if Recommendations.find().count() is 0
     price: 'HKD 500'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
-
-  rec1Id = Recommendations.insert
-    name: "Rec for User 1"
-    presentId: wineId
-    dinnerId: delaneyId
-    flowerId: roseId
-
-  rec2Id = Recommendations.insert
-    name: "Rec for User 2"
-    presentId: chocoId
-    dinnerId: pizzaId
-    flowerId: bouId
-
-  rec3Id = Recommendations.insert
-    name: "Rec for User 3"
-    presentId: ringId
-    dinnerId: globeId
-    flowerId: lavId

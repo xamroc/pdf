@@ -1,19 +1,20 @@
 Template.recommendationItem.helpers
+  target: ->
+    Meteor.users.findOne(@targetId)
 
-  present: ->
-    Presents.find(@presentId).fetch()[0]
-  dinner: ->
-    Dinners.find(@dinnerId).fetch()[0]
-  flower: ->
-    Flowers.find(@flowerId).fetch()[0]
+  # present: ->
+  #   Presents.findOne(@presentId)
+  # dinner: ->
+  #   Dinners.findOne(@dinnerId)
+  # flower: ->
+  #   Flowers.findOne(@flowerId)
 
 Template.recommendationItem.events
   'click .activeuser': (e) ->
     e.preventDefault()
 
-    Recommendations.find().fetch()[0]
+    Recommendations.findOne()
     recId = @._id
-    console.log recId
 
 
 
