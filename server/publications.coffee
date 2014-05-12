@@ -1,6 +1,4 @@
 Meteor.publish "recommendations", ->
-  self = this
-  initializing = true
   recommendationsCursor = Recommendations.find(userId: @userId)
   datedFriendsIds = recommendationsCursor.fetch().map (recommendation) ->
     recommendation.targetId
