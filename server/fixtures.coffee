@@ -113,37 +113,6 @@ if Presents.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring3.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
 
-  Presents.insert
-    location: 'Central'
-    title: 'Wine'
-    description: 'Cabernet Sauvignon'
-    price: 'HKD 400'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/wine1.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
-
-  Presents.insert
-    location: 'Admiralty'
-    title: 'Chocolate'
-    description: 'Aguis Chocolate'
-    price: 'HKD 400'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/choco2.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
-
-  Presents.insert
-    location: 'Cyberport'
-    title: 'Ring'
-    description: 'Ring Mabelle'
-    price: 'HKD 1400'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring3.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
-
-
 if Dinners.find().count() is 0
 
   delaneyId = Dinners.insert
@@ -153,7 +122,7 @@ if Dinners.find().count() is 0
     price: 'HKD 600'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner.jpg'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner1.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner1+logo.png'
 
   pizzaId = Dinners.insert
@@ -185,7 +154,7 @@ if Flowers.find().count() is 0
     price: 'HKD 300'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/rose.jpg'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
   bouId = Flowers.insert
@@ -195,7 +164,7 @@ if Flowers.find().count() is 0
     price: 'HKD 700'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2.jpg'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2.jpeg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2+logo.png'
 
   lavId = Flowers.insert
