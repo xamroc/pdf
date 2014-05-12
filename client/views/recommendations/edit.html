@@ -1,6 +1,5 @@
 <template name="editRecommendation">
-  <a href="#" id="prev">Previous</a>
-  <img src="{{currentRecommendation.target.profile.picture}}" alt="">
-  {{currentRecommendation.target.profile.name}}
-  <a href="#" id="next">Next</a>
+  <div>
+    <span class="glyphicon glyphicon-chevron-left" id="prev"></span><span><img src="{{currentRecommendation.target.profile.picture}}" alt="" class="target-profile img-circle"></span><span class="target-name">{{currentRecommendation.target.profile.name}}</span><span class="glyphicon glyphicon-chevron-right" id="next"></span>
+  </div>
 </template>

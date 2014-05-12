@@ -10,22 +10,14 @@ $red:#EB5265;
     .target-name {
       margin-left: 10%;
     }
-    .close {
-      font-size: 20px;
-      font-weight: bold;
-      line-height: 18px;
+    .glyphicon-remove {
       text-shadow: 0 1px 0 #ffffff;
-      margin-top: 4%;
+      margin-top: 6%;
       margin-right: 5%;
-}
-    .close:hover {
-      color: #000000;
-      text-decoration: none;
       opacity: 0.4;
-      filter: alpha(opacity=40);
-      cursor: pointer;
-    }
-}
+      float: right;
+}}
+
 .target-profile {
   width: 50px;
   height: 50px;
@@ -61,5 +53,30 @@ $red:#EB5265;
   float: right;
 }
 
+.recommendation-info {
+  max-height: 40px;
+  overflow: hidden;
+}
+
+// Recommendation edit
+.target-name {
+  font-size: 16px;
+  margin: 2%;
+  color: $red;
+  margin-left: 10%;
+}
+
+.glyphicon-chevron-left {
+  color: gray;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.4;
+}
+
+.glyphicon-chevron-right {
+  color: gray;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.4;
+  float: right;
+}
 
 
