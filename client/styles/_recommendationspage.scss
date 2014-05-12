@@ -1,22 +1,35 @@
-.list-background {
-  background-color: gray;
-}
+$bgDefault      : #478bda;
 
-.imagelist {
-  width: 260px;
-  height: 260px;
-}
+.background {
+  .recommendation-item {
+    float: left;
+    margin: 2%;
+    width: 46%;
+    height: 46%;
+    .imagelist {
+      width: 100%;
+      margin-bottom: 2%;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+    }}}
 
-.recommendation-item {
-  float: left;
-  margin: 10px;
+.recommendation-title {
+  font-weight: bold;
+  color: $bgDefault;
 }
 
 .vendorlist {
-  width: 35px;
-  height: 35px;
+  width: 20px;
+  height: 20px;
 }
 
 .price {
   float: right;
 }
+
+.location {
+  float: right;
+}
+
+
+

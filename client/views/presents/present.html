@@ -1,14 +1,15 @@
 <template name="present">
-  <div class="presentList recommendation-item">
-    <img src="{{image}}" alt="{{title}}" class="imagelist">
-    <div>
-      <span>{{title}}</span>
-      <span class="price">{{price}}</span>
-    </div>
-    <div>
-      <img src="{{vendorimage}}" alt="{{vendor}}" class="vendorlist img-circle">
-      <span>{{vendor}}</span>
-      <span>{{location}}</span>
+  <div class="presentLists">
+    <div class="recommendation-item">
+      <img src="{{image}}" alt="{{title}}" class="imagelist">
+      <div>
+        <p><span class="recommendation-title">{{title}}</span><span class="price">{{price}}</span></p>
+      </div>
+      <div>
+        <p><img src="{{vendorimage}}" alt="{{vendor}}" class="vendorlist img-circle">
+        <span>{{vendor}}</span>
+        <span class="location">{{location}}</span></p>
+      </div>
     </div>
   </div>
 </template>

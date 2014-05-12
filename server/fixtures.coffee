@@ -83,35 +83,66 @@ if Locations.find().count() is 0
 
 if Presents.find().count() is 0
 
-  wineId = Presents.insert
+  Presents.insert
     location: 'Central'
     title: 'Wine'
     description: 'Cabernet Sauvignon'
     price: 'HKD 400'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/wine.jpg'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/wine1.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
 
-  chocoId = Presents.insert
+  Presents.insert
     location: 'Admiralty'
     title: 'Chocolate'
     description: 'Aguis Chocolate'
     price: 'HKD 400'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocolate.jpg'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/choco2.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
 
-  ringId = Presents.insert
+  Presents.insert
     location: 'Cyberport'
     title: 'Ring'
     description: 'Ring Mabelle'
     price: 'HKD 1400'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring.jpg'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring3.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
+
+  Presents.insert
+    location: 'Central'
+    title: 'Wine'
+    description: 'Cabernet Sauvignon'
+    price: 'HKD 400'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/wine1.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
+
+  Presents.insert
+    location: 'Admiralty'
+    title: 'Chocolate'
+    description: 'Aguis Chocolate'
+    price: 'HKD 400'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/choco2.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
+
+  Presents.insert
+    location: 'Cyberport'
+    title: 'Ring'
+    description: 'Ring Mabelle'
+    price: 'HKD 1400'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring3.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
+
 
 if Dinners.find().count() is 0
 

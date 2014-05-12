@@ -1,19 +1,20 @@
 <template name="recommendationsList">
-  <h1>Recommendations for each user</h1>
-  <div>
-    {{#each recommendations}}
-      {{> recommendationItem}}
-    {{/each}}
+  <div class="background">
+    <h1>Recommendations for each user</h1>
+    <div>
+      {{#each recommendations}}
+        {{> recommendationItem}}
+      {{/each}}
+    </div>
+
+    <div>
+      {{#each allPresents}}
+        {{> present}}
+      {{/each}}
+    </div>
   </div>
 
-  <div class="list-background">
-    <h1>List of all presents</h1>
-    {{#each allPresents}}
-      {{> present}}
-    {{/each}}
-  </div>
-
-  <h1>List of all dinners</h1>
+<!--   <h1>List of all dinners</h1>
   <div>
     {{#each allDinners}}
       {{> dinner}}
@@ -25,5 +26,5 @@
     {{#each allFlowers}}
       {{> flower}}
     {{/each}}
-  </div>
+  </div> -->
 </template>
