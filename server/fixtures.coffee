@@ -90,6 +90,8 @@ if Presents.find().count() is 0
     price: 'HKD 400'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/wine.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
 
   chocoId = Presents.insert
     location: 'Admiralty'
@@ -98,6 +100,8 @@ if Presents.find().count() is 0
     price: 'HKD 400'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocolate.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
 
   ringId = Presents.insert
     location: 'Cyberport'
@@ -106,6 +110,8 @@ if Presents.find().count() is 0
     price: 'HKD 1400'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
 
 if Dinners.find().count() is 0
 
@@ -116,6 +122,8 @@ if Dinners.find().count() is 0
     price: 'HKD 600'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner1+logo.png'
 
   pizzaId = Dinners.insert
     locationId: 'Admiralty'
@@ -124,6 +132,8 @@ if Dinners.find().count() is 0
     price: 'HKD 200'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner2.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner2+logo.png'
 
   globeId = Dinners.insert
     locationId: 'Cyberport'
@@ -132,6 +142,8 @@ if Dinners.find().count() is 0
     price: 'HKD 1200'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3+logo.png'
 
 if Flowers.find().count() is 0
 
@@ -142,6 +154,8 @@ if Flowers.find().count() is 0
     price: 'HKD 300'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/rose.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
   bouId = Flowers.insert
     locationId: 'Admiralty'
@@ -150,6 +164,8 @@ if Flowers.find().count() is 0
     price: 'HKD 700'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2+logo.png'
 
   lavId = Flowers.insert
     locationId: 'Cyberport'
@@ -158,3 +174,5 @@ if Flowers.find().count() is 0
     price: 'HKD 500'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower3.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower3+logo.png'

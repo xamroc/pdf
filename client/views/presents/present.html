@@ -1,9 +1,14 @@
 <template name="present">
-  <li>
-    <div class="presentList">
+  <div class="presentList recommendation-item">
+    <img src="{{image}}" alt="{{title}}" class="imagelist">
+    <div>
       <span>{{title}}</span>
-      <span>{{location}}</span>
       <span>{{price}}</span>
     </div>
-  </li>
+    <div>
+      <img src="{{vendorimage}}" alt="{{vendor}}" class="vendorlist">
+      <span>{{vendor}}</span>
+      <span>{{location}}</span>
+    </div>
+  </div>
 </template>
