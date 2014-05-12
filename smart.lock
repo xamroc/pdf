@@ -10,7 +10,8 @@
         "branch": "master"
       },
       "scss": {},
-      "autocomplete": {}
+      "autocomplete": {},
+      "spin": {}
     },
     "packages": {
       "iron-router": {
@@ -35,13 +36,18 @@
       },
       "scss": {
         "git": "https://github.com/fourseven/meteor-scss.git",
-        "tag": "v0.8.4",
-        "commit": "11af0da643944d241fe7d173af76162c4b670dee"
+        "tag": "v0.8.7",
+        "commit": "d085b7272eacc20866abff61b25c915a22ddbcf4"
       },
       "autocomplete": {
         "git": "https://github.com/mizzao/meteor-autocomplete.git",
         "tag": "v0.4.3",
         "commit": "a70bd9b6b9f5576a0fa96a7a3440b1a7d83e4a32"
+      },
+      "spin": {
+        "git": "https://github.com/SachaG/meteor-spin.git",
+        "tag": "v0.2.2",
+        "commit": "3f655f0016228e4195acc784c45d3e3a247dc39f"
       },
       "caret-position": {
         "git": "https://github.com/StockBase/meteor-caret-position.git",

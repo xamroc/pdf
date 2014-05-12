@@ -1,5 +1,6 @@
 Router.configure
   layoutTemplate: 'layout'
+  loadingTemplate: 'loading'
   waitOn: () ->
     Meteor.subscribe 'recommendations'
     Meteor.subscribe 'presents'
@@ -9,4 +10,6 @@ Router.configure
 
 Router.map ->
   @.route 'main', { path: '/' }
-  @.route 'recommendationsList', { path: '/recommendations' }
+  @.route 'editRecommendation', { path: '/recommendations' }
+
+Router.onBeforeAction 'loading'

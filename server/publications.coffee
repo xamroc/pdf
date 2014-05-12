@@ -2,7 +2,7 @@ Meteor.publish "recommendations", ->
   recommendationsCursor = Recommendations.find(userId: @userId)
   datedFriendsIds = recommendationsCursor.fetch().map (recommendation) ->
     recommendation.targetId
-  datedFriendsCursor = Meteor.users.find(_id: {$in: datedFriendsIds})
+  datedFriendsCursor = Meteor.users.find(_id: {$in: datedFriendsIds}, {fields: {services: 0}})
   [recommendationsCursor, datedFriendsCursor]
 
 Meteor.publish "presents", ->
