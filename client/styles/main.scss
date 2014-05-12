@@ -8,7 +8,7 @@
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 p {
@@ -16,6 +16,10 @@ p {
   margin: 0;
 }
 
+.left-margin {
+  margin-left: 2%;
+  margin-right: 2%;
+}
 // Color for navbar in header
 
 $bgDefault      : #478bda;
@@ -70,3 +74,9 @@ $colHighlight   : #030711;
 }
 
 #spinner { height: 300px }
+
+// For friends autocomplete
+.form-control {
+  border-color: $bgDefault;
+  height: 44px;
+}

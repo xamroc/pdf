@@ -1,8 +1,9 @@
 <template name="showRecommendation">
-  <li>
-    <div class="activeuser">
-      <img src="{{target.profile.picture}}" alt="">
-      <p>{{target.profile.name}}</p>
-    </div>
-  </li>
+  <div class="activeuser">
+    <h2>
+      <img src="{{target.profile.picture}}" alt="" class="target-profile img-circle">
+      <span class="target-name">{{target.profile.name}}</span>
+      <span class="close">×</span>
+    </h2>
+  </div>
 </template>

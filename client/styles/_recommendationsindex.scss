@@ -1,4 +1,35 @@
 $bgDefault      : #478bda;
+$red:#EB5265;
+
+.activeuser {
+  h2 {
+    font-size: 16px;
+    margin: 2%;
+    color: $red;
+  }
+    .target-name {
+      margin-left: 10%;
+    }
+    .close {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 18px;
+      text-shadow: 0 1px 0 #ffffff;
+      margin-top: 4%;
+      margin-right: 5%;
+}
+    .close:hover {
+      color: #000000;
+      text-decoration: none;
+      opacity: 0.4;
+      filter: alpha(opacity=40);
+      cursor: pointer;
+    }
+}
+.target-profile {
+  width: 50px;
+  height: 50px;
+}
 
 .recommendation-item {
   float: left;

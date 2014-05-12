@@ -1,9 +1,12 @@
 <template name="recommendations">
-  <h1>Recommendations for each user</h1>
   <div>
     {{#each recommendations}}
       {{> showRecommendation}}
     {{/each}}
+  </div>
+
+  <div class="left-margin">
+    <h1>Recommendations for each user</h1>
   </div>
 
   <div>
