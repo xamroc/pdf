@@ -1,8 +1,10 @@
 <template name="showRecommendation">
   <li>
     <div class="activeuser">
-      <img src="{{target.profile.picture}}" alt="">
-      <p>{{target.profile.name}}</p>
+      <a href="{{pathFor 'editRecommendation'}}">
+        <img src="{{target.profile.picture}}" alt="">
+        <p>{{target.profile.name}}</p>
+      </a>
     </div>
   </li>
 </template>

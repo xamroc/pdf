@@ -20,5 +20,3 @@ Template.recommendations.helpers
 
   allFlowers: ->
     Flowers.find()
-
-

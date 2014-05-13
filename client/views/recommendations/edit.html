@@ -1,6 +1,19 @@
 <template name="editRecommendation">
   <a href="#" id="prev">Previous</a>
-  <img src="{{currentRecommendation.target.profile.picture}}" alt="">
-  {{currentRecommendation.target.profile.name}}
+  <img src="{{targetUser.profile.picture}}" alt="">
+  {{targetUser.profile.name}}
+  <form class="form-group">
+    <label for="location" class="sr-only">Location</label>
+    <select name="location" id="location">
+      <option value="">Select location</option>
+      {{#each locations}}
+        {{> location}}
+      {{/each}}
+    </select>
+  </form>
   <a href="#" id="next">Next</a>
+</template>
+
+<template name="location">
+  <option value="{{_id}}" {{selected}}>{{name}}</option>
 </template>
