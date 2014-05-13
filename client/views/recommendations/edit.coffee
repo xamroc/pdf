@@ -28,6 +28,23 @@ Template.editRecommendation.helpers
   locations: ->
     Locations.find()
 
+Template.recommendation.helpers
+
+  dinner: ->
+    recommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
+    dinner = Dinners.findOne _id: recommendation.dinnerId
+    dinner.title
+
+  flower: ->
+    recommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
+    flower = Flowers.findOne _id: recommendation.flowerId
+    flower.title
+
+  present: ->
+    recommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
+    present = Presents.findOne _id: recommendation.presentId
+    present.title
+
 Template.location.helpers
   selected: ->
     currentRecommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
@@ -64,3 +81,4 @@ Template.editRecommendation.events
     location = translateLocationId locationId
 
     findRecommendation recommendationId, location
+
