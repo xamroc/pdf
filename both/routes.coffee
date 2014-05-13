@@ -16,6 +16,9 @@ Router.map ->
     path: '/recommendations'
     onBeforeAction: ->
       if @ready()
-        @redirect '/' if Recommendations.find().count() is 0
+        if Recommendations.find().count() is 0
+          @redirect '/'
+          throwError 'Please add friends to date list'
 
 Router.onBeforeAction 'loading'
+Router.onBeforeAction -> clearErrors()
