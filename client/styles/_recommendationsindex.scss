@@ -85,17 +85,25 @@ $red:#EB5265;
   padding-top: 3.5%;
 }
 
-.chosen-item {
+.chosen-item-1 {
   float: left;
-  margin: 2%;
-  width: 29%;
-  height: 29%;
-  .imagelist {
-    width: 100%;
-    margin-bottom: 2%;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-  }}
+  width: 30%;
+  height: 30%;
+}
+
+.chosen-item-2 {
+  float: left;
+  width: 30%;
+  height: 30%;
+  margin-left: 5%;
+}
+
+.imagelist {
+  width: 100%;
+  margin-bottom: 2%;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
 
 .chosen-title {
   font-weight: bold;
