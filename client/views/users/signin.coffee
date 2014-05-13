@@ -1,9 +1,9 @@
 Template.signin.events
   'click input[type=submit]': (event) ->
     event.preventDefault()
-    username = $('#username').val()
+    email = $('#email').val()
     password = $('#password').val()
-    Meteor.loginWithPassword username, password, (err) ->
+    Meteor.loginWithPassword email, password, (err) ->
       if err
         console.log err
         throwError err.reason

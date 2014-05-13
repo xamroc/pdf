@@ -16,7 +16,7 @@ Template.signup.events
         Router.go '/'
 
   'click #signin': ->
-    Router.go '/signin'
+    Router.go 'signin'
 
   'click .facebook-button': ->
     Meteor.loginWithFacebook
