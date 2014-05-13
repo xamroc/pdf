@@ -1,5 +1,7 @@
 <template name="editRecommendation">
-  <a href="#" id="prev">Previous</a>
+  {{#if showPrevNext}}
+    <a href="#" id="prev">Previous</a>
+  {{/if}}
   <img src="{{targetUser.profile.picture}}" alt="">
   {{targetUser.profile.name}}
   <form class="form-group">
@@ -11,18 +13,16 @@
       {{/each}}
     </select>
   </form>
-  <a href="#" id="next">Next</a>
-  {{> recommendation}}
-</template>
-
-<template name="location">
-  <option value="{{_id}}" {{selected}}>{{name}}</option>
-</template>
-
-<template name="recommendation">
+  {{#if showPrevNext}}
+    <a href="#" id="next">Next</a>
+  {{/if}}
   <ul>
     <li>{{present}}</li>
     <li>{{dinner}}</li>
     <li>{{flower}}</li>
   </ul>
+</template>
+
+<template name="location">
+  <option value="{{_id}}" {{selected}}>{{name}}</option>
 </template>

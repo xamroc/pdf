@@ -28,22 +28,38 @@ Template.editRecommendation.helpers
   locations: ->
     Locations.find()
 
-Template.recommendation.helpers
+  showPrevNext: ->
+    if Recommendations.find().count() < 2
+      false
+    else
+      true
 
   dinner: ->
     recommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
-    dinner = Dinners.findOne _id: recommendation.dinnerId
-    dinner.title
+    if recommendation
+      dinner = Dinners.findOne _id: recommendation.dinnerId
+      dinner.title
+
+    else
+      'No dinner'
 
   flower: ->
     recommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
-    flower = Flowers.findOne _id: recommendation.flowerId
-    flower.title
+    if recommendation
+      flower = Flowers.findOne _id: recommendation.flowerId
+      flower.title
+
+    else
+      'No flower'
 
   present: ->
     recommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
-    present = Presents.findOne _id: recommendation.presentId
-    present.title
+    if recommendation
+      present = Presents.findOne _id: recommendation.presentId
+      present.title
+
+    else
+      'No present'
 
 Template.location.helpers
   selected: ->
