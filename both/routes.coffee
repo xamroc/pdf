@@ -9,7 +9,13 @@ Router.configure
     Meteor.subscribe 'locations'
 
 Router.map ->
-  @.route 'main', { path: '/' }
-  @.route 'editRecommendation', { path: '/recommendations' }
+  @route 'main',
+    path: '/'
+
+  @route 'editRecommendation',
+    path: '/recommendations'
+    onBeforeAction: ->
+      if @ready()
+        @redirect '/' if Recommendations.find().count() is 0
 
 Router.onBeforeAction 'loading'
