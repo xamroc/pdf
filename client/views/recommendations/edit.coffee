@@ -2,6 +2,15 @@ translateLocationId = (locationId) ->
   locations = Locations.find().fetch()
   location = (_.findWhere locations, {_id: locationId}).name
 
+findRecommendation = (location) ->
+  dinner = Dinners.findOne {location: location}
+  flower = Flowers.findOne {location: location}
+  present = Presents.findOne {location: location}
+
+  console.log dinner
+  console.log flower
+  console.log present
+
 Template.editRecommendation.rendered = ->
   targetUser = Session.get 'targetUser'
   if targetUser
@@ -55,3 +64,5 @@ Template.editRecommendation.events
 
     locationId = Recommendations.findOne({targetId: Session.get 'targetUser'}).locationId
     location = translateLocationId(locationId)
+
+    findRecommendation(location)
