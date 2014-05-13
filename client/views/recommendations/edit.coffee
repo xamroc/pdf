@@ -48,3 +48,11 @@ Template.editRecommendation.events
     Recommendations.update _id: recommendationId, {$set: {locationId: $(e.target).val()}}, (error, result) ->
       if error
         console.log 'error: ', error
+
+    locationId = Recommendations.findOne({targetId: Session.get 'targetUser'}).locationId
+
+    if locationId
+      locations = Locations.find().fetch()
+      location = (_.findWhere locations, {_id: locationId}).name
+    else
+      console.log 'Invalid Location.'
