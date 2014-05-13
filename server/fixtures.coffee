@@ -81,7 +81,7 @@ if Locations.find().count() is 0
     "name": "Tai Hang",
     "area": "Hong Kong Island"
 
-if Recommendations.find().count() is 0
+if Presents.find().count() is 0
 
   wineId = Presents.insert
     location: 'Central'
@@ -107,6 +107,8 @@ if Recommendations.find().count() is 0
     vendor: 'Vendor'
     phonenumber: '1278 7897'
 
+if Dinners.find().count() is 0
+
   delaneyId = Dinners.insert
     locationId: 'Central'
     title: 'Delaney Restaurant'
@@ -131,6 +133,8 @@ if Recommendations.find().count() is 0
     vendor: 'Vendor'
     phonenumber: '1278 7897'
 
+if Flowers.find().count() is 0
+
   roseId = Flowers.insert
     locationId: 'Central'
     title: 'Rose'
@@ -154,21 +158,3 @@ if Recommendations.find().count() is 0
     price: 'HKD 500'
     vendor: 'Vendor'
     phonenumber: '1278 7897'
-
-  rec1Id = Recommendations.insert
-    name: "Rec for User 1"
-    presentId: wineId
-    dinnerId: delaneyId
-    flowerId: roseId
-
-  rec2Id = Recommendations.insert
-    name: "Rec for User 2"
-    presentId: chocoId
-    dinnerId: pizzaId
-    flowerId: bouId
-
-  rec3Id = Recommendations.insert
-    name: "Rec for User 3"
-    presentId: ringId
-    dinnerId: globeId
-    flowerId: lavId
