@@ -37,29 +37,26 @@ Template.editRecommendation.helpers
   dinner: ->
     recommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
     if recommendation
-      dinner = Dinners.findOne _id: recommendation.dinnerId
-      dinner.title
-
-    else
-      'No dinner'
+      if recommendation.dinnerId
+        dinner = Dinners.findOne(recommendation.dinnerId).title
+      else
+        'No dinner'
 
   flower: ->
     recommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
     if recommendation
-      flower = Flowers.findOne _id: recommendation.flowerId
-      flower.title
-
-    else
-      'No flower'
+      if recommendation.flowerId
+        flower = Flowers.findOne(recommendation.flowerId).title
+      else
+        'No flower'
 
   present: ->
     recommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
     if recommendation
-      present = Presents.findOne _id: recommendation.presentId
-      present.title
-
-    else
-      'No present'
+      if recommendation.presentId
+        present = Presents.findOne(recommendation.presentId).title
+      else
+        'No present'
 
 Template.location.helpers
   selected: ->
