@@ -2,14 +2,12 @@ translateLocationId = (locationId) ->
   locations = Locations.find().fetch()
   location = (_.findWhere locations, {_id: locationId}).name
 
-findRecommendation = (location) ->
+findRecommendation = (recommendationId, location) ->
   dinner = Dinners.findOne {location: location}
   flower = Flowers.findOne {location: location}
   present = Presents.findOne {location: location}
 
-  console.log dinner
-  console.log flower
-  console.log present
+  Recommendations.update _id: recommendationId, {$set: { dinnerId: dinner._id, flowerId: flower._id, presentId: present._id }}
 
 Template.editRecommendation.rendered = ->
   targetUser = Session.get 'targetUser'
@@ -63,6 +61,6 @@ Template.editRecommendation.events
         console.log 'error: ', error
 
     locationId = Recommendations.findOne({targetId: Session.get 'targetUser'}).locationId
-    location = translateLocationId(locationId)
+    location = translateLocationId locationId
 
-    findRecommendation(location)
+    findRecommendation recommendationId, location
