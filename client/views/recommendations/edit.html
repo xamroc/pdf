@@ -1,23 +1,22 @@
 <template name="editRecommendation">
-<<<<<<< HEAD
 
   <div class="left-margin">
     {{#if showPrevNext}}
-      <p><span class="glyphicon glyphicon-chevron-left" id="prev"></span>
+      <a href="#" class="glyphicon glyphicon-chevron-left" id="prev"></a>
     {{/if}}
-      <img src="{{targetUser.profile.picture}}" alt="" class="target-profile-edit img-circle">
-      <span class="target-name">{{targetUser.profile.name}}</span>
-      <form class="form-group">
-        <label for="location" class="sr-only">Location</label>
-        <select name="location" id="location">
-          <option value="">Select location</option>
-          {{#each locations}}
-            {{> location}}
-          {{/each}}
-        </select>
-      </form>
+    <img src="{{targetUser.profile.picture}}" alt="" class="target-profile-edit img-circle">
+    <span class="target-name">{{targetUser.profile.name}}</span>
+    <form class="form-group">
+      <label for="location" class="sr-only">Location</label>
+      <select name="location" id="location">
+        <option value="">Select location</option>
+        {{#each locations}}
+          {{> location}}
+        {{/each}}
+      </select>
+    </form>
     {{#if showPrevNext}}
-      <span class="glyphicon glyphicon-chevron-right" id="next"></span></p>
+      <a href="#" class="glyphicon glyphicon-chevron-right" id="next"></a>
     {{/if}}
   </div>
 
