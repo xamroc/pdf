@@ -17,21 +17,14 @@ Template.editRecommendation.helpers
   locations: ->
     Locations.find()
 
-Template.location.helpers
-  selected: ->
-    currentRecommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
-    if currentRecommendation
-      if currentRecommendation.locationId && currentRecommendation.locationId == @_id
-        'selected'
+  # presents: ->
+  #   Presents.find recommendationId: @_id
 
-  presents: ->
-    Presents.find recommendationId: @_id
+  # dinners: ->
+  #   Dinners.find recommendationId: @_id
 
-  dinners: ->
-    Dinners.find recommendationId: @_id
-
-  flowers: ->
-    Flowers.find recommendationId: @_id
+  # flowers: ->
+  #   Flowers.find recommendationId: @_id
 
   allPresents: ->
     Presents.find()
@@ -41,6 +34,13 @@ Template.location.helpers
 
   allFlowers: ->
     Flowers.find()
+
+Template.location.helpers
+  selected: ->
+    currentRecommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
+    if currentRecommendation
+      if currentRecommendation.locationId && currentRecommendation.locationId == @_id
+        'selected'
 
 Template.editRecommendation.events
   'click #prev': (e) ->
