@@ -1,8 +1,18 @@
 <template name="editRecommendation">
+
   <div class="left-margin">
     <p><span class="glyphicon glyphicon-chevron-left" id="prev"></span>
-    <img src="{{currentRecommendation.target.profile.picture}}" alt="" class="target-profile-edit img-circle">
-    <span class="target-name">{{currentRecommendation.target.profile.name}}</span>
+    <img src="{{targetUser.profile.picture}}" alt="" class="target-profile-edit img-circle">
+    <span class="target-name">{{targetUser.profile.name}}</span>
+    <form class="form-group">
+    <label for="location" class="sr-only">Location</label>
+    <select name="location" id="location">
+      <option value="">Select location</option>
+      {{#each locations}}
+        {{> location}}
+      {{/each}}
+    </select>
+  </form>
     <span class="glyphicon glyphicon-chevron-right" id="next"></span></p>
   </div>
 
@@ -48,4 +58,8 @@
       {{> flower}}
     {{/each}}
   </div>
+</template>
+
+<template name="location">
+  <option value="{{_id}}" {{selected}}>{{name}}</option>
 </template>
