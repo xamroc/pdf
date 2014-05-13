@@ -1,3 +1,14 @@
+translateLocationId = (locationId) ->
+  locations = Locations.find().fetch()
+  location = (_.findWhere locations, {_id: locationId}).name
+
+findRecommendation = (recommendationId, location) ->
+  dinner = Dinners.findOne {location: location}
+  flower = Flowers.findOne {location: location}
+  present = Presents.findOne {location: location}
+
+  Recommendations.update _id: recommendationId, {$set: { dinnerId: dinner._id, flowerId: flower._id, presentId: present._id }}
+
 Template.editRecommendation.rendered = ->
   targetUser = Session.get 'targetUser'
   if targetUser
@@ -16,6 +27,46 @@ Template.editRecommendation.helpers
 
   locations: ->
     Locations.find()
+
+  recommendations: ->
+    Recommendations.find()
+
+  chosenPresent: ->
+    targetUser = Session.get 'targetUser'
+    recommendation = Recommendations.findOne targetId: targetUser
+    if recommendation
+      if recommendation.presentId
+        Presents.findOne recommendation.presentId
+    else
+      console.log 'first present: ', Presents.findOne()
+
+
+  chosenDinner: ->
+    targetUser = Session.get 'targetUser'
+    recommendation = Recommendations.findOne targetId: targetUser
+    if recommendation
+      if recommendation.dinnerId
+        Dinners.findOne recommendation.dinnerId
+    else
+      console.log 'first dinner: ', Dinners.findOne()
+
+  chosenFlower: ->
+    targetUser = Session.get 'targetUser'
+    recommendation = Recommendations.findOne targetId: targetUser
+    if recommendation
+      if recommendation.flowerId
+        Flowers.findOne recommendation.flowerId
+    else
+      console.log 'first flower: ', Flowers.findOne()
+
+  allPresents: ->
+    Presents.find()
+
+  allDinners: ->
+    Dinners.find()
+
+  allFlowers: ->
+    Flowers.find()
 
   showPrevNext: ->
     if Recommendations.find().count() < 2
@@ -54,3 +105,8 @@ Template.editRecommendation.events
     Recommendations.update _id: recommendationId, {$set: {locationId: $(e.target).val()}}, (error, result) ->
       if error
         console.log 'error: ', error
+
+    locationId = Recommendations.findOne({targetId: Session.get 'targetUser'}).locationId
+    location = translateLocationId locationId
+
+    findRecommendation recommendationId, location
