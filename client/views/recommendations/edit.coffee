@@ -17,14 +17,23 @@ Template.editRecommendation.helpers
   locations: ->
     Locations.find()
 
-  # presents: ->
-  #   Presents.find recommendationId: @_id
+  recommendations: ->
+    Recommendations.find()
 
-  # dinners: ->
-  #   Dinners.find recommendationId: @_id
+  chosenPresent: ->
+    targetUser = Session.get 'targetUser'
+    recommendations = Recommendations.findOne targetId: targetUser
+    Presents.findOne recommendations.presentId
 
-  # flowers: ->
-  #   Flowers.find recommendationId: @_id
+  chosenDinner: ->
+    targetUser = Session.get 'targetUser'
+    recommendations = Recommendations.findOne targetId: targetUser
+    Dinners.findOne recommendations.dinnerId
+
+  chosenFlower: ->
+    targetUser = Session.get 'targetUser'
+    recommendations = Recommendations.findOne targetId: targetUser
+    Flowers.findOne recommendations.flowerId
 
   allPresents: ->
     Presents.find()

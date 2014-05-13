@@ -1,46 +1,60 @@
 <template name="editRecommendation">
 
   <div class="left-margin">
-    {{#if showPrevNext}}
-      <a href="#" class="glyphicon glyphicon-chevron-left" id="prev"></a>
-    {{/if}}
-    <img src="{{targetUser.profile.picture}}" alt="" class="target-profile-edit img-circle">
-    <span class="target-name">{{targetUser.profile.name}}</span>
-    <form class="form-group">
-      <label for="location" class="sr-only">Location</label>
-      <select name="location" id="location">
-        <option value="">Select location</option>
-        {{#each locations}}
-          {{> location}}
-        {{/each}}
-      </select>
-    </form>
-    {{#if showPrevNext}}
-      <a href="#" class="glyphicon glyphicon-chevron-right" id="next"></a>
-    {{/if}}
+    <p>
+      {{#if showPrevNext}}
+        <a href="#" class="glyphicon glyphicon-chevron-left" id="prev"></a>
+      {{/if}}
+      <img src="{{targetUser.profile.picture}}" alt="" class="target-profile-edit img-circle">
+      <span class="target-name">{{targetUser.profile.name}}</span>
+      <span>
+        <form class="form-group">
+          <label for="location" class="sr-only">Location</label>
+          <select name="location" id="location">
+            <option value="">Select location</option>
+            {{#each locations}}
+              {{> location}}
+            {{/each}}
+          </select>
+        </form>
+      </span>
+      {{#if showPrevNext}}
+        <a href="#" class="glyphicon glyphicon-chevron-right" id="next"></a>
+      {{/if}}
+    </p>
   </div>
 
   <div class="left-margin">
-    <h1>Recommendations for each user</h1>
-    <div class="recommended-item">
-      <img src="{{image}}" alt="{{title}}" class="imagelist">
-      <div>
-        <p><span class="recommended-title">{{title}}</span><span class="price">{{price}}</span></p>
-      </div>
-    </div>
+    <h1 class="chosen">Chosen</h1>
+    <div class= "chosen-row">
 
-    <div class="recommended-item">
-      <img src="{{image}}" alt="{{title}}" class="imagelist">
-      <div>
-        <p><span class="recommended-title">{{title}}</span><span class="price">{{price}}</span></p>
+      <div class="chosen-item">
+        <img src="{{chosenPresent.image}}" alt="{{chosenPresent.title}}" class="imagelist">
+        <div>
+          <p>
+            <span class="chosen-title">{{chosenPresent.title}}</span>
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="recommended-item">
-      <img src="{{image}}" alt="{{title}}" class="imagelist">
-      <div>
-        <p><span class="recommended-title">{{title}}</span><span class="price">{{price}}</span></p>
+      <div class="chosen-item">
+        <img src="{{chosenDinner.image}}" alt="{{chosenDinner.title}}" class="imagelist">
+        <div>
+          <p>
+            <span class="chosen-title">{{chosenDinner.title}}</span>
+          </p>
+        </div>
       </div>
+
+      <div class="chosen-item">
+        <img src="{{chosenFlower.image}}" alt="{{chosenFlower.title}}" class="imagelist">
+        <div>
+          <p>
+            <span class="chosen-title">{{chosenFlower.title}}</span>
+          </p>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -49,7 +63,7 @@
       {{#each allPresents}}
         {{> present}}
       {{/each}}
-    </div>
+  </div>
 
   <div>
     {{#each allDinners}}
