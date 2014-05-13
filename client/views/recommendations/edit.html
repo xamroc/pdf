@@ -1,19 +1,24 @@
 <template name="editRecommendation">
+<<<<<<< HEAD
 
   <div class="left-margin">
-    <p><span class="glyphicon glyphicon-chevron-left" id="prev"></span>
-    <img src="{{targetUser.profile.picture}}" alt="" class="target-profile-edit img-circle">
-    <span class="target-name">{{targetUser.profile.name}}</span>
-    <form class="form-group">
-    <label for="location" class="sr-only">Location</label>
-    <select name="location" id="location">
-      <option value="">Select location</option>
-      {{#each locations}}
-        {{> location}}
-      {{/each}}
-    </select>
-  </form>
-    <span class="glyphicon glyphicon-chevron-right" id="next"></span></p>
+    {{#if showPrevNext}}
+      <p><span class="glyphicon glyphicon-chevron-left" id="prev"></span>
+    {{/if}}
+      <img src="{{targetUser.profile.picture}}" alt="" class="target-profile-edit img-circle">
+      <span class="target-name">{{targetUser.profile.name}}</span>
+      <form class="form-group">
+        <label for="location" class="sr-only">Location</label>
+        <select name="location" id="location">
+          <option value="">Select location</option>
+          {{#each locations}}
+            {{> location}}
+          {{/each}}
+        </select>
+      </form>
+    {{#if showPrevNext}}
+      <span class="glyphicon glyphicon-chevron-right" id="next"></span></p>
+    {{/if}}
   </div>
 
   <div class="left-margin">

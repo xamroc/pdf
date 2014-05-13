@@ -35,6 +35,12 @@ Template.editRecommendation.helpers
   allFlowers: ->
     Flowers.find()
 
+  showPrevNext: ->
+    if Recommendations.find().count() < 2
+      false
+    else
+      true
+
 Template.location.helpers
   selected: ->
     currentRecommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
