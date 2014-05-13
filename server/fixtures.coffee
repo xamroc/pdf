@@ -115,7 +115,7 @@ if Presents.find().count() is 0
 
 if Dinners.find().count() is 0
 
-  delaneyId = Dinners.insert
+  Dinners.insert
     location: 'Central'
     title: 'Delaney Restaurant'
     description: 'Romantic dinner'
@@ -125,7 +125,7 @@ if Dinners.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner1.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner1+logo.png'
 
-  pizzaId = Dinners.insert
+  Dinners.insert
     location: 'Admiralty'
     title: 'Paisano Pizza'
     description: 'Huge pizza'
@@ -135,7 +135,7 @@ if Dinners.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner2.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner2+logo.png'
 
-  globeId = Dinners.insert
+  Dinners.insert
     location: 'Cyberport'
     title: 'The Globe'
     description: 'Romantic Bar for two'
@@ -147,7 +147,7 @@ if Dinners.find().count() is 0
 
 if Flowers.find().count() is 0
 
-  roseId = Flowers.insert
+  Flowers.insert
     location: 'Central'
     title: 'Rose'
     description: 'Red color'
@@ -157,7 +157,7 @@ if Flowers.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
-  bouId = Flowers.insert
+ Flowers.insert
     location: 'Admiralty'
     title: 'Bouvardia'
     description: 'Smell like sweet perfume'
@@ -167,7 +167,7 @@ if Flowers.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2.jpeg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2+logo.png'
 
-  lavId = Flowers.insert
+ Flowers.insert
     location: 'Cyberport'
     title: 'Lavendar'
     description: 'Twilight mixed flower'
