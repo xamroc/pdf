@@ -28,35 +28,51 @@ Template.editRecommendation.helpers
   locations: ->
     Locations.find()
 
+  recommendations: ->
+    Recommendations.find()
+
+  chosenPresent: ->
+    targetUser = Session.get 'targetUser'
+    recommendation = Recommendations.findOne targetId: targetUser
+    if recommendation
+      if recommendation.presentId
+        Presents.findOne recommendation.presentId
+    else
+      console.log 'first present: ', Presents.findOne()
+
+
+  chosenDinner: ->
+    targetUser = Session.get 'targetUser'
+    recommendation = Recommendations.findOne targetId: targetUser
+    if recommendation
+      if recommendation.dinnerId
+        Dinners.findOne recommendation.dinnerId
+    else
+      console.log 'first dinner: ', Dinners.findOne()
+
+  chosenFlower: ->
+    targetUser = Session.get 'targetUser'
+    recommendation = Recommendations.findOne targetId: targetUser
+    if recommendation
+      if recommendation.flowerId
+        Flowers.findOne recommendation.flowerId
+    else
+      console.log 'first flower: ', Flowers.findOne()
+
+  allPresents: ->
+    Presents.find()
+
+  allDinners: ->
+    Dinners.find()
+
+  allFlowers: ->
+    Flowers.find()
+
   showPrevNext: ->
     if Recommendations.find().count() < 2
       false
     else
       true
-
-  dinner: ->
-    recommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
-    if recommendation
-      if recommendation.dinnerId
-        dinner = Dinners.findOne(recommendation.dinnerId).title
-      else
-        'No dinner'
-
-  flower: ->
-    recommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
-    if recommendation
-      if recommendation.flowerId
-        flower = Flowers.findOne(recommendation.flowerId).title
-      else
-        'No flower'
-
-  present: ->
-    recommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
-    if recommendation
-      if recommendation.presentId
-        present = Presents.findOne(recommendation.presentId).title
-      else
-        'No present'
 
 Template.location.helpers
   selected: ->
@@ -94,4 +110,3 @@ Template.editRecommendation.events
     location = translateLocationId locationId
 
     findRecommendation recommendationId, location
-
