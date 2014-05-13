@@ -74,7 +74,9 @@ p {
       background-color: $bgHighlight; }
     .icon-bar {
       background-color: $colDefault; }}
-  .navbar-collapse,
+  .navbar-collapse {
+    background-color: $red;
+  }
   .navbar-form {
     border-color: $colDefault; }
   .navbar-link {
@@ -93,6 +95,11 @@ p {
         background-color: $bgHighlight; }}}
 }
 
+#login-buttons-facebook {
+  background: transparent;
+  border-color: white;
+  width: 100%;
+}
 #spinner { height: 300px }
 
 // For friends autocomplete
