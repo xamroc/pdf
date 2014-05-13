@@ -12,8 +12,13 @@
     </select>
   </form>
   <a href="#" id="next">Next</a>
+  {{> recommendation}}
 </template>
 
 <template name="location">
   <option value="{{_id}}" {{selected}}>{{name}}</option>
+</template>
+
+<template name="recommendation">
+  This is where recommendations will be
 </template>

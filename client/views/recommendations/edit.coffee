@@ -56,3 +56,4 @@ Template.editRecommendation.events
       location = (_.findWhere locations, {_id: locationId}).name
     else
       console.log 'Invalid Location.'
+
