@@ -1,3 +1,7 @@
+translateLocationId = (locationId) ->
+  locations = Locations.find().fetch()
+  location = (_.findWhere locations, {_id: locationId}).name
+
 Template.editRecommendation.rendered = ->
   targetUser = Session.get 'targetUser'
   if targetUser
@@ -50,10 +54,4 @@ Template.editRecommendation.events
         console.log 'error: ', error
 
     locationId = Recommendations.findOne({targetId: Session.get 'targetUser'}).locationId
-
-    if locationId
-      locations = Locations.find().fetch()
-      location = (_.findWhere locations, {_id: locationId}).name
-    else
-      console.log 'Invalid Location.'
-
+    location = translateLocationId(locationId)
