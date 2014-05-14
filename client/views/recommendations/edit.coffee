@@ -46,6 +46,16 @@ Template.editRecommendation.rendered = ->
   $('a[data-toggle="tab"]').on 'shown.bs.tab', (e) ->
     loadIsotopes(['#presents', '#dinners', '#anythings'])
 
+  datingTarget = $('#dating-target').hammer
+    preventDefault: true
+    gesture: true
+
+  datingTarget.on 'swipeleft', (e) ->
+    changeDatingTarget 'prev'
+
+  datingTarget.on 'swiperight', (e) ->
+    changeDatingTarget 'next'
+
 Template.editRecommendation.helpers
 
   targetUser: ->
@@ -120,31 +130,31 @@ Template.location.helpers
       if recommendation.locationId && recommendation.locationId == @_id
         'selected'
 
-Template.editRecommendation.events
-  'click #prev': (e) ->
-    currentIndex = Session.get 'currentIndex'
-    recommendationsLength = Recommendations.find().count()
+changeDatingTarget = (direction) ->
+  currentIndex = Session.get 'currentIndex'
+  lastIndex = Recommendations.find().count() - 1
+  if direction == 'prev'
     if currentIndex == 0
-      Session.set 'currentIndex', recommendationsLength - 1
+      Session.set 'currentIndex', lastIndex
     else
       Session.set 'currentIndex', currentIndex - 1
-    Session.set 'targetUser', Recommendations.find().fetch()[Session.get 'currentIndex'].targetId
-    resetIsotopes ['#presents', '#dinners', '#anythings']
+  else
+    if currentIndex == lastIndex
+      Session.set 'currentIndex', 0
+    else
+      Session.set 'currentIndex', currentIndex + 1
+  Session.set 'targetUser', Recommendations.find().fetch()[Session.get 'currentIndex'].targetId
+  resetIsotopes ['#presents', '#dinners', '#anythings']
 
+Template.editRecommendation.events
+  'click #prev': (e) ->
+    changeDatingTarget 'prev'
+  'click #next': (e) ->
+    changeDatingTarget 'next'
   'click .recommendation-item': (e) ->
     e.preventDefault()
     unless $(e.target).context.nodeName == 'BUTTON' or $(e.target).context.parentNode.nodeName == 'BUTTON'
       $("##{@_id}").modal 'show'
-
-  'click #next': (e) ->
-    currentIndex = Session.get 'currentIndex'
-    recommendationsLength = Recommendations.find().count()
-    if currentIndex == recommendationsLength - 1
-      Session.set 'currentIndex', 0
-    else
-      Session.set 'currentIndex', currentIndex + 1
-    Session.set 'targetUser', Recommendations.find().fetch()[Session.get 'currentIndex'].targetId
-    resetIsotopes ['#presents', '#dinners', '#anythings']
 
   'change #location': (e) ->
     recommendationId = currentRecommendation()._id
@@ -156,3 +166,4 @@ Template.editRecommendation.events
     generateRecommendation recommendationId, locationId
     destroyIsotopes ['#presents', '#dinners', '#anythings']
     loadIsotopes ['#presents', '#dinners', '#anythings']
+
