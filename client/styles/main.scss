@@ -25,23 +25,37 @@ p {
   color: gray;
 }
 
+#homepage-intro .motto {
+  color: #FFFFFF;
+}
+
 #homepage-intro {
-  background-color: hsla(347, 100%, 80%, 1);
+  background: linear-gradient(
+    hsla(347, 100%, 80%, 1), hsla(347, 100%, 90%, 1) 90%, hsla(347, 100%, 100%, 1));
   text-align: center;
-  padding-bottom: 10px;
+  padding-top: 60px;
+  padding-bottom: 70px;
   margin-top: -10px;
   margin-bottom: 20px;
+  height: inherit;
 }
 
 #homepage-intro h1 {
   color: #FFFFFF;
   font-size: 4em;
   font-family: Helvetica;
+  border: 1px solid;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 #homepage-intro h2 {
+  color: #FFFFF0;
   font-size: 24px;
   font-family: Helvetica;
+  margin-bottom: 30px;
 }
 
 .left-margin {
@@ -113,6 +127,11 @@ p {
       > a, > a:hover, > a:focus, {
         color: $colHighlight;
         background-color: $bgHighlight; }}}
+}
+
+.version {
+  color: hsla(262, 28%, 62%, 1);
+  margin-bottom: 60px;
 }
 
 #login-buttons-facebook {
