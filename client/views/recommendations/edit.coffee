@@ -47,7 +47,6 @@ Template.editRecommendation.rendered = ->
     loadIsotopes(['#presents', '#dinners', '#anythings'])
 
   datingTarget = $('#dating-target').hammer
-    preventDefault: true
     gesture: true
 
   datingTarget.on 'swipeleft', (e) ->
