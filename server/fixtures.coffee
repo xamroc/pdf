@@ -1,90 +1,90 @@
 if Locations.find().count() is 0
-  Locations.insert
+  centralId = Locations.insert
     "name": "Central",
     "area": "Hong Kong Island"
-  Locations.insert
+  midLevelId = Locations.insert
     "name": "Mid-level",
     "area": "Hong Kong Island"
-  Locations.insert
+  thePeakId = Locations.insert
     "name": "The Peak",
     "area": "Hong Kong Island"
-  Locations.insert
+  saiWanId = Locations.insert
     "name": "Sai Wan",
     "area": "Hong Kong Island"
-  Locations.insert
+  sheungWanId = Locations.insert
     "name": "Sheung Wan",
     "area": "Hong Kong Island"
-  Locations.insert
+  causewayBayId = Locations.insert
     "name": "Causeway Bay",
     "area": "Hong Kong Island"
-  Locations.insert
+  chaiWanId = Locations.insert
     "name": "Chai Wan",
     "area": "Hong Kong Island"
-  Locations.insert
+  northPointId = Locations.insert
     "name": "North Point",
     "area": "Hong Kong Island"
-  Locations.insert
+  quarryBayId = Locations.insert
     "name": "Quarry Bay",
     "area": "Hong Kong Island"
-  Locations.insert
+  saiWanHoId = Locations.insert
     "name": "Sai Wan Ho",
     "area": "Hong Kong Island"
-  Locations.insert
+  shauKeiWanId = Locations.insert
     "name": "Shau Kei Wan",
     "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Siu Sai Wan",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Aberdeen",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Ap Lei Chau",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Chung Hom Kok",
-    "area": "Hong Kong Island"
-  Locations.insert
+  # Locations.insert
+  #   "name": "Siu Sai Wan",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Aberdeen",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Ap Lei Chau",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Chung Hom Kok",
+  #   "area": "Hong Kong Island"
+  cyberportId = Locations.insert
     "name": "Cyberport",
     "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Chung Hom Kok",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Deep Water Bay",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Pok Fu Lam",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Repulse Bay",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Stanley",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Shek O",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Tai Tam",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Wong Chuk Hang",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Wan Chai",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Happy Valley",
-    "area": "Hong Kong Island"
-  Locations.insert
-    "name": "Tai Hang",
-    "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Chung Hom Kok",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Deep Water Bay",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Pok Fu Lam",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Repulse Bay",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Stanley",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Shek O",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Tai Tam",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Wong Chuk Hang",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Wan Chai",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Happy Valley",
+  #   "area": "Hong Kong Island"
+  # Locations.insert
+  #   "name": "Tai Hang",
+  #   "area": "Hong Kong Island"
 
 if Presents.find().count() is 0
 
   Presents.insert
-    location: 'Central'
+    location: centralId
     title: 'Wine'
     description: 'Cabernet Sauvignon'
     price: 'HKD 400'
@@ -94,7 +94,7 @@ if Presents.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
 
   Presents.insert
-    location: 'The Peak'
+    location: thePeakId
     title: 'Strawberries'
     description: 'A box of strawberries'
     price: 'HKD 100'
@@ -104,7 +104,7 @@ if Presents.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
 
   Presents.insert
-    location: 'Mid-level'
+    location: midLevelId
     title: 'Chocolate'
     description: 'Aguis Chocolate'
     price: 'HKD 400'
@@ -114,7 +114,7 @@ if Presents.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
 
   Presents.insert
-    location: 'Sai Wan'
+    location: saiWanId
     title: 'Strawberry Suits'
     description: 'Strawberries like a sir!'
     price: 'HKD 600'
@@ -124,7 +124,7 @@ if Presents.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
 
   Presents.insert
-    location: 'Sheung Wan'
+    location: sheungWanId
     title: 'Basket of Fruit'
     description: 'Sheung Wan tossed'
     price: 'HKD 100'
@@ -134,7 +134,7 @@ if Presents.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
 
   Presents.insert
-    location: 'Causeway Bay'
+    location: causewayBayId
     title: 'Pink Zaku'
     description: 'Perfect for mecha girls'
     price: 'HKD 400'
@@ -144,7 +144,7 @@ if Presents.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
 
   Presents.insert
-    location: 'Cyberport'
+    location: cyberportId
     title: 'Ring'
     description: 'Ring Mabelle'
     price: 'HKD 1400'
@@ -154,7 +154,7 @@ if Presents.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
 
   Presents.insert
-    location: 'Chai Wan'
+    location: chaiWanId
     title: 'Apple Gift Cards'
     description: 'For Apple Products'
     price: 'HKD 1400'
@@ -164,7 +164,7 @@ if Presents.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
 
   Presents.insert
-    location: 'North Point'
+    location: northPointId
     title: 'Windows Gift Cards'
     description: 'For the love of blue screeens'
     price: 'HKD 500'
@@ -174,7 +174,7 @@ if Presents.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
 
   Presents.insert
-    location: 'Quarry Bay'
+    location: quarryBayId
     title: 'Disneyland Tickets'
     description: 'To the happiest place on Earth'
     price: 'HKD 1400'
@@ -184,7 +184,7 @@ if Presents.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
 
   Presents.insert
-    location: 'Sai Wan Ho'
+    location: saiWanHoId
     title: 'Ocean Park Tickets'
     description: 'To the wettest place on Earth'
     price: 'HKD 1300'
@@ -194,7 +194,7 @@ if Presents.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
 
   Presents.insert
-    location: 'Shau Kei Wan'
+    location: shauKeiWanId
     title: 'LV Bag'
     description: 'Prestigious Bag'
     price: 'HKD 16300'
@@ -206,7 +206,7 @@ if Presents.find().count() is 0
 if Dinners.find().count() is 0
 
   Dinners.insert
-    location: 'Central'
+    location: centralId
     title: 'Delaney Restaurant'
     description: 'Romantic dinner'
     price: 'HKD 600'
@@ -216,7 +216,7 @@ if Dinners.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner1+logo.png'
 
   Dinners.insert
-    location: 'The Peak'
+    location: thePeakId
     title: 'Eat at the Top'
     description: 'Get high for dinner'
     price: 'HKD 1100'
@@ -226,7 +226,7 @@ if Dinners.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner1+logo.png'
 
   Dinners.insert
-    location: 'Mid-level'
+    location: midLevelId
     title: 'Paisano Pizza'
     description: 'Huge pizza'
     price: 'HKD 200'
@@ -236,7 +236,7 @@ if Dinners.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner2+logo.png'
 
   Dinners.insert
-    location: 'Sai Wan'
+    location: saiWanId
     title: 'Victor Lin Poultry'
     description: 'You will find no chicken unbitten here'
     price: 'HKD 200'
@@ -246,7 +246,7 @@ if Dinners.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner2+logo.png'
 
   Dinners.insert
-    location: 'Sheung Wan'
+    location: sheungWanId
     title: 'K-Roll'
     description: 'Korean burritos'
     price: 'HKD 100'
@@ -256,7 +256,7 @@ if Dinners.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3+logo.png'
 
   Dinners.insert
-    location: 'Causeway Bay'
+    location: causewayBayId
     title: 'Shelter'
     description: 'Skybar for two'
     price: 'HKD 1200'
@@ -266,7 +266,7 @@ if Dinners.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3+logo.png'
 
   Dinners.insert
-    location: 'Cyberport'
+    location: cyberportId
     title: 'The Globe'
     description: 'Romantic Bar for two'
     price: 'HKD 1200'
@@ -276,7 +276,7 @@ if Dinners.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3+logo.png'
 
   Dinners.insert
-    location: 'Chai Wan'
+    location: chaiWanId
     title: 'Wooden Dinner'
     description: 'Dinner in a forest'
     price: 'HKD 1300'
@@ -286,7 +286,7 @@ if Dinners.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3+logo.png'
 
   Dinners.insert
-    location: 'North Point'
+    location: northPointId
     title: 'Timber Dinner'
     description: 'Timber beavers'
     price: 'HKD 800'
@@ -296,7 +296,7 @@ if Dinners.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3+logo.png'
 
   Dinners.insert
-    location: 'Quarry Bay'
+    location: quarryBayId
     title: 'The View'
     description: 'View Eating for two'
     price: 'HKD 1250'
@@ -306,7 +306,7 @@ if Dinners.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3+logo.png'
 
   Dinners.insert
-    location: 'Sai Wan Ho'
+    location: saiWanHoId
     title: 'Fancy Restaurant'
     description: 'Restaurant for madames'
     price: 'HKD 2100'
@@ -316,7 +316,7 @@ if Dinners.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner1+logo.png'
 
   Dinners.insert
-    location: 'Shau Kei Wan'
+    location: shauKeiWanId
     title: 'English Restaurant'
     description: 'Restaurant for madames'
     price: 'HKD 3100'
@@ -328,7 +328,7 @@ if Dinners.find().count() is 0
 if Anythings.find().count() is 0
 
   Anythings.insert
-    location: 'Central'
+    location: centralId
     title: 'Rose'
     description: 'Red color'
     price: 'HKD 300'
@@ -338,7 +338,7 @@ if Anythings.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
   Anythings.insert
-    location: 'The Peak'
+    location: thePeakId
     title: 'Mountain Flower'
     description: 'Consume the essence of eternal beauty'
     price: 'HKD 300'
@@ -348,7 +348,7 @@ if Anythings.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
   Anythings.insert
-    location: 'Mid-level'
+    location: midLevelId
     title: 'Bouvardia'
     description: 'Smell like sweet perfume'
     price: 'HKD 700'
@@ -358,7 +358,7 @@ if Anythings.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2+logo.png'
 
   Anythings.insert
-    location: 'Sai Wan'
+    location: saiWanId
     title: 'Vetter Flowers'
     description: 'One whiff to desire less'
     price: 'HKD 700'
@@ -368,7 +368,7 @@ if Anythings.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2+logo.png'
 
   Anythings.insert
-    location: 'Sheung Wan'
+    location: sheungWanId
     title: 'Flower Crown'
     description: 'Your majesty'
     price: 'HKD 600'
@@ -378,7 +378,7 @@ if Anythings.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower3+logo.png'
 
   Anythings.insert
-    location: 'Causeway Bay'
+    location: causewayBayId
     title: 'Flower Panda'
     description: 'The best of both worlds'
     price: 'HKD 300'
@@ -388,7 +388,7 @@ if Anythings.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
   Anythings.insert
-    location: 'Cyberport'
+    location: cyberportId
     title: 'Lavendar'
     description: 'Twilight mixed flower'
     price: 'HKD 500'
@@ -398,7 +398,7 @@ if Anythings.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower3+logo.png'
 
   Anythings.insert
-    location: 'Chai Wan'
+    location: chaiWanId
     title: 'Lipstick'
     description: 'Luscious Red'
     price: 'HKD 200'
@@ -408,7 +408,7 @@ if Anythings.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower3+logo.png'
 
   Anythings.insert
-    location: 'North Point'
+    location: northPointId
     title: 'Pink Heels'
     description: 'So cute! Waaa~'
     price: 'HKD 200'
@@ -418,7 +418,7 @@ if Anythings.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower3+logo.png'
 
   Anythings.insert
-    location: 'Quarry Bay'
+    location: quarryBayId
     title: 'Pink Ribbon'
     description: 'For little girls'
     price: 'HKD 100'
@@ -428,7 +428,7 @@ if Anythings.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
   Anythings.insert
-    location: 'Sai Wan Ho'
+    location: saiWanHoId
     title: 'Macbook Pro'
     description: 'Code.'
     price: 'HKD 9300'
@@ -438,7 +438,7 @@ if Anythings.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
   Anythings.insert
-    location: 'Shau Kei Wan'
+    location: shauKeiWanId
     title: 'Running Shoes'
     description: 'Good Luck Girl'
     price: 'HKD 1100'
