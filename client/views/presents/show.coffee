@@ -1,4 +1,8 @@
-Template.present.events
+Template.showPresent.helpers
+  location: ->
+    Locations.findOne(@location).name
+
+Template.showPresent.events
   'click .presentList': (e) ->
     e.preventDefault()
 
