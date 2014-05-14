@@ -2,31 +2,33 @@
 
   <div class="left-margin">
     <p>
+
       {{#if showPrevNext}}
-        <a href="#" class="glyphicon glyphicon-chevron-left" id="prev"></a>
+        <span class="arrow"><a href="#" class="glyphicon glyphicon-chevron-right pull-right" id="next"></a></span>
+      {{/if}}
+
+      {{#if showPrevNext}}
+        <span class="arrow"><a href="#" class="glyphicon glyphicon-chevron-left pull-left" id="prev"></a></span>
       {{/if}}
       <img src="{{targetUser.profile.picture}}" alt="" class="target-profile-edit img-circle">
       <span class="target-name">{{targetUser.profile.name}}</span>
-      {{#if showPrevNext}}
-        <a href="#" class="glyphicon glyphicon-chevron-right" id="next"></a>
-      {{/if}}
-      <span>
-        <form class="form-group">
-          <label for="location" class="sr-only">Location</label>
-          <select name="location" id="location">
-            <option value="">Select location</option>
-            {{#each locations}}
-              {{> location}}
-            {{/each}}
-          </select>
-        </form>
+
+      <span class="form-group">
+        <label for="location" class="sr-only">Location</label>
+        <select name="location" id="location">
+          <option value="">Select location</option>
+          {{#each locations}}
+            {{> location}}
+          {{/each}}
+        </select>
+
       </span>
     </p>
   </div>
 
   <div class="left-margin">
     <h1 class="chosen">Chosen</h1>
-    <div class= "chosen-row">
+    <div class= "row chosen-row">
 
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="chosen-item">
@@ -60,8 +62,8 @@
           </div>
         </div>
       </div>
-
     </div>
+
   </div>
   <div>
     <div>

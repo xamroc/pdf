@@ -1,5 +1,9 @@
 $bgDefault      : #478bda;
+$bgHighlight    : #eb5366;
+$colDefault     : #ffffff;
+$colHighlight   : #030711;
 $red            : #EB5265;
+$lightgray      : #F4F4F4;
 
 .activeuser {
   h2 {
@@ -26,6 +30,7 @@ $red            : #EB5265;
 .recommendation-item {
   margin-bottom: 10%;
   width: 100%;
+  background-color: white;
   .imagelist {
     width: 100%;
     margin-bottom: 2%;
@@ -43,17 +48,46 @@ $red            : #EB5265;
   height: 1.5em;
 }
 
-.price {
-  float: right;
-}
-
 .location {
   float: right;
 }
 
 .recommendation-info {
-  max-height: 40px;
-  overflow: hidden;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 18%;
+  h2 {
+    font-size: 1em;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    border-bottom: 1px solid $lightgray;
+    padding-bottom: 3%;
+  }
+  h4 {
+    font-size: 0.8em;
+    font-weight: 300;
+    margin-top: 2%;
+    margin-bottom: 0;
+    .vendor {
+      padding-left: 3%;
+    }
+  }
+  h3 {
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: 4%;
+    margin-bottom: 0;
+    .price {
+      float: left;
+      padding-top: 3%;
+  }
+    }
+  .btn-add {
+    background-color: $red;
+    color: white;
+    float: right;
+  }
+
 }
 
 // Recommendation edit
@@ -79,8 +113,6 @@ $red            : #EB5265;
   color: gray;
   text-shadow: 0 1px 0 #ffffff;
   opacity: 0.4;
-  float: right;
-  padding-top: 3.5%;
 }
 
 .chosen-item {
@@ -103,3 +135,11 @@ $red            : #EB5265;
 .chosen {
   text-align: center;
 }
+
+.pull-right, .pull-left {
+  margin-top: 10px;
+}
+
+// div {
+//   border: 1px solid black;
+// }
