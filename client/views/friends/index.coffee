@@ -6,7 +6,7 @@ Template.friends.settings =
     field: 'profile.name'
     subscription: 'availableFriends'
     matchAll: true
-    template: Template.friends
+    template: Template.showFriend
     callback: (doc, element) ->
       friendList = _.without Meteor.user().profile.friendList, doc._id
       Meteor.users.update Meteor.userId(), $set: { "profile.friendList": friendList }

@@ -11,8 +11,8 @@ Meteor.publish "presents", ->
 Meteor.publish "dinners", ->
   Dinners.find()
 
-Meteor.publish 'flowers', ->
-  Flowers.find()
+Meteor.publish 'anythings', ->
+  Anythings.find()
 
 Meteor.publish 'availableFriends', (selector, options) ->
   collection = Meteor.users
