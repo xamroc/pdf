@@ -1,16 +1,21 @@
 <template name="editRecommendation">
 
   <div class="left-margin">
-    <p>
+    <div>
       {{#if showPrevNext}}
-        <a href="#" class="glyphicon glyphicon-chevron-left" id="prev"></a>
+        <span class="arrow"><a href="#" class="glyphicon glyphicon-chevron-right pull-right" id="next"></a></span>
       {{/if}}
-      <img src="{{targetUser.profile.picture}}" alt="" class="target-profile-edit img-circle">
-      <span class="target-name">{{targetUser.profile.name}}</span>
+
       {{#if showPrevNext}}
-        <a href="#" class="glyphicon glyphicon-chevron-right" id="next"></a>
+        <span class="arrow"><a href="#" class="glyphicon glyphicon-chevron-left pull-left" id="prev"></a></span>
       {{/if}}
-      <span>
+
+      <div class="center">
+        <span class="target-profile-edit img-circle target-profile-bar">
+          <img src="{{targetUser.profile.picture}}" alt="">
+        </span>
+        <span class="target-name-edit target-profile-bar">{{targetUser.profile.name}}</span>
+
         <form class="form-group">
           <label for="location" class="sr-only">Location</label>
           <select name="location" id="location">
@@ -20,13 +25,14 @@
             {{/each}}
           </select>
         </form>
-      </span>
-    </p>
+
+      </div>
+    </div>
   </div>
 
   <div class="left-margin row">
     <h1 class="chosen">Chosen</h1>
-    <div class= "chosen-row">
+    <div class= "row chosen-row">
 
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="chosen-item">
@@ -60,8 +66,8 @@
           </div>
         </div>
       </div>
-
     </div>
+
   </div>
   <div class="row">
     <div class="pdatabs">

@@ -1,5 +1,9 @@
 $bgDefault      : #478bda;
+$bgHighlight    : #eb5366;
+$colDefault     : #ffffff;
+$colHighlight   : #030711;
 $red            : #EB5265;
+$lightgray      : #F4F4F4;
 
 .activeuser {
   h2 {
@@ -9,23 +13,39 @@ $red            : #EB5265;
   }
     .target-name {
       margin-left: 10%;
+      margin-top: 15px;
     }
     .glyphicon-remove {
       text-shadow: 0 1px 0 #ffffff;
-      margin-top: 6%;
+      margin-top: 17px;
       margin-right: 5%;
       opacity: 0.4;
       float: right;
 }}
 
+#profile-block {
+  margin-top: 3%;
+}
+
 .target-profile {
-  width: 3em;
-  height: 3em;
+  height: 3.5em;
+  width: 3.5em;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  img {
+    width: 3.5em;
+    flex-shrink:0;
+    min-width:100%;
+    min-height:100%
+  }
 }
 
 .recommendation-item {
   margin-bottom: 10%;
   width: 100%;
+  background-color: white;
   .imagelist {
     width: 100%;
     margin-bottom: 2%;
@@ -39,12 +59,17 @@ $red            : #EB5265;
 }
 
 .vendorlist {
-  width: 1.5em;
   height: 1.5em;
-}
-
-.price {
-  float: right;
+  width: 1.5em;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  img {
+    width: 3.5em;
+    flex-shrink:0;
+    min-width:100%;
+    min-height:100%
+  }
 }
 
 .location {
@@ -52,21 +77,75 @@ $red            : #EB5265;
 }
 
 .recommendation-info {
-  max-height: 40px;
-  overflow: hidden;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 18%;
+  h2 {
+    font-size: 1em;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    border-bottom: 1px solid $lightgray;
+    padding-bottom: 3%;
+  }
+  h4 {
+    font-size: 0.8em;
+    font-weight: 300;
+    margin-top: 2%;
+    margin-bottom: 0;
+    .vendor {
+      padding-left: 3%;
+    }
+  }
+  h3 {
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: 4%;
+    margin-bottom: 0;
+    .price {
+      float: left;
+      padding-top: 3%;
+  }
+    }
+  .btn-add {
+    background-color: $red;
+    color: white;
+    float: right;
+  }
 }
 
 // Recommendation edit
-.target-profile-edit {
-  width: 3.5em;
-  height: 3.5em;
+.center {
+  display: flex;
 }
 
-.target-name {
+.target-profile-edit {
+  height: 3.5em;
+  width: 3.5em;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  img {
+    width: 3.5em;
+    flex-shrink:0;
+    min-width:100%;
+    min-height:100%
+  }
+}
+
+.target-profile-bar {
+  float: left;
+}
+
+.target-name-edit {
   font-size: 16px;
   margin: 2%;
   color: $red;
-  margin-left: 10%;
+  float: left;
+}
+
+.form-group {
+  margin: 0;
 }
 
 .glyphicon-chevron-left {
@@ -79,8 +158,6 @@ $red            : #EB5265;
   color: gray;
   text-shadow: 0 1px 0 #ffffff;
   opacity: 0.4;
-  float: right;
-  padding-top: 3.5%;
 }
 
 .chosen-item {
@@ -103,3 +180,33 @@ $red            : #EB5265;
 .chosen {
   text-align: center;
 }
+
+.target-name-edit, .form-group, .pull-right, .pull-left {
+  margin-top: 10px;
+}
+
+.pdatabs {
+  .nav-tabs {
+    border-bottom: 0;
+    li {
+      width: 33%;
+      text-align: center;
+      font-weight: 300;
+      font-size: 0.8em;
+    }
+  }
+}
+
+#location {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: $lightgray;
+  border-radius: 0;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+// div {
+//   border: 1px solid black;
+// }

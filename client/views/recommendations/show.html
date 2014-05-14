@@ -1,13 +1,15 @@
 <template name="showRecommendation">
-  <li>
-    <div class="activeuser">
-      <a href="{{pathFor 'editRecommendation'}}">
-        <h2>
-          <img src="{{target.profile.picture}}" alt="" class="target-profile img-circle">
-          <span class="target-name">{{target.profile.name}}</span>
-          <span class="glyphicon glyphicon-remove"></span>
-        </h2>
-      </a>
-    </div>
-  </li>
+  <div class="activeuser">
+    <a href="{{pathFor 'editRecommendation'}}">
+
+      <div id="profile-block" class="container">
+        <span class="target-profile img-circle target-profile-bar">
+          <img src="{{target.profile.picture}}" alt="">
+        </span>
+        <span class="target-name target-profile-bar">{{target.profile.name}}</span>
+        <span class="glyphicon glyphicon-remove target-profile-bar"></span>
+      </div>
+
+    </a>
+  </div>
 </template>
