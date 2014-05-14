@@ -225,9 +225,9 @@ if Dinners.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3+logo.png'
 
-if Flowers.find().count() is 0
+if Anythings.find().count() is 0
 
-  Flowers.insert
+  Anythings.insert
     location: 'Central'
     title: 'Rose'
     description: 'Red color'
@@ -237,7 +237,7 @@ if Flowers.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
-  Flowers.insert
+  Anythings.insert
     location: 'The Peak'
     title: 'Mountain Flower'
     description: 'Consume the essence of eternal beauty'
@@ -247,7 +247,7 @@ if Flowers.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower4.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
-  Flowers.insert
+  Anythings.insert
     location: 'Mid-level'
     title: 'Bouvardia'
     description: 'Smell like sweet perfume'
@@ -257,7 +257,7 @@ if Flowers.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2.jpeg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2+logo.png'
 
-  Flowers.insert
+  Anythings.insert
     location: 'Sai Wan'
     title: 'Vetter Flowers'
     description: 'One whiff to desire less'
@@ -267,7 +267,7 @@ if Flowers.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower5.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2+logo.png'
 
-  Flowers.insert
+  Anythings.insert
     location: 'Sheung Wan'
     title: 'Flower Crown'
     description: 'Your majesty'
@@ -277,7 +277,7 @@ if Flowers.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower6.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower3+logo.png'
 
-  Flowers.insert
+  Anythings.insert
     location: 'Causeway Bay'
     title: 'Flower Panda'
     description: 'The best of both worlds'
@@ -287,7 +287,7 @@ if Flowers.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower7.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
-  Flowers.insert
+  Anythings.insert
     location: 'Cyberport'
     title: 'Lavendar'
     description: 'Twilight mixed flower'

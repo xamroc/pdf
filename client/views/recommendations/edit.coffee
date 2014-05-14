@@ -4,10 +4,10 @@ translateLocationId = (locationId) ->
 
 findRecommendation = (recommendationId, location) ->
   dinner = Dinners.findOne {location: location}
-  flower = Flowers.findOne {location: location}
+  anything = Anythings.findOne {location: location}
   present = Presents.findOne {location: location}
 
-  Recommendations.update _id: recommendationId, {$set: { dinnerId: dinner._id, flowerId: flower._id, presentId: present._id }}
+  Recommendations.update _id: recommendationId, {$set: { dinnerId: dinner._id, anythingId: anything._id, presentId: present._id }}
 
 Template.editRecommendation.rendered = ->
   targetUser = Session.get 'targetUser'
@@ -50,14 +50,14 @@ Template.editRecommendation.helpers
     else
       Dinners.findOne()
 
-  chosenFlower: ->
+  chosenAnything: ->
     targetUser = Session.get 'targetUser'
     recommendation = Recommendations.findOne targetId: targetUser
     if recommendation
-      if recommendation.flowerId
-        Flowers.findOne recommendation.flowerId
+      if recommendation.anythingId
+        Anythings.findOne recommendation.anythingId
     else
-      Flowers.findOne()
+      Anythings.findOne()
 
   allPresents: ->
     Presents.find()
@@ -65,8 +65,8 @@ Template.editRecommendation.helpers
   allDinners: ->
     Dinners.find()
 
-  allFlowers: ->
-    Flowers.find()
+  allAnythings: ->
+    Anythings.find()
 
   showPrevNext: ->
     if Recommendations.find().count() < 2
