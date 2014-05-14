@@ -3,11 +3,11 @@
 @import 'recommendationsindex';
 
 
-$bgDefault      : #478bda;
-$bgHighlight    : #eb5366;
-$colDefault     : #ffffff;
-$colHighlight   : #030711;
-$red            : #EB5265;
+$bgDefault      : hsla(212, 67%, 57%, 1);
+$bgHighlight    : hsla(353, 79%, 62%, 1);
+$colDefault     : hsla(0, 100%, 100%, 1);
+$colHighlight   : hsla(223, 70%, 4%, 1);
+$red            : hsla(353, 79%, 62%, 1);
 
 #main {
   padding-right: 8px;
@@ -23,6 +23,25 @@ p {
   font-size: 12px;
   margin: 0;
   color: gray;
+}
+
+#homepage-intro {
+  background-color: hsla(347, 100%, 80%, 1);
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+#homepage-intro h1 {
+  color: #FFFFFF;
+  font-size: 4em;
+  font-family: Helvetica;
+}
+
+#homepage-intro h2 {
+  font-size: 24px;
+  font-family: Helvetica;
 }
 
 .left-margin {
@@ -46,7 +65,9 @@ p {
 }
 
 .navbar-default {
-  background-color: $bgDefault;
+  background-image: linear-gradient(
+    hsla(202, 79%, 63%, 1), hsla(202, 79%, 55%, 1) 60%, hsla(202, 79%, 46%, 1)
+  );
   border: none;
   .navbar-brand {
     color: $colDefault;
