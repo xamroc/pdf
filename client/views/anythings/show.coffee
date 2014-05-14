@@ -1,5 +1,8 @@
+Template.showAnything.helpers
+  location: ->
+    Locations.findOne(@location).name
 
-Template.anything.events
+Template.showAnything.events
   'click .anythingList': (e) ->
     e.preventDefault()
 

@@ -83,125 +83,137 @@ if Locations.find().count() is 0
 
 if Presents.find().count() is 0
 
-  Presents.insert
-    location: centralId
-    title: 'Wine'
-    description: 'Cabernet Sauvignon'
-    price: 'HKD 400'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/wine1.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
+  presents =
+    wine:
+      title: 'Wine'
+      description: 'Cabernet Sauvignon'
+      price: 'HKD 400'
+      vendor: 'Vendor'
+      phonenumber: '1278 7897'
+      image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/wine1.jpg'
+      vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
 
-  Presents.insert
-    location: thePeakId
-    title: 'Strawberries'
-    description: 'A box of strawberries'
-    price: 'HKD 100'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/strawberries.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
+    strawberries:
+      title: 'Strawberries'
+      description: 'A box of strawberries'
+      price: 'HKD 100'
+      vendor: 'Vendor'
+      phonenumber: '1278 7897'
+      image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/strawberries.jpg'
+      vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
 
-  Presents.insert
-    location: midLevelId
-    title: 'Chocolate'
-    description: 'Aguis Chocolate'
-    price: 'HKD 400'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/choco2.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
+    chocolate:
+      title: 'Chocolate'
+      description: 'Aguis Chocolate'
+      price: 'HKD 400'
+      vendor: 'Vendor'
+      phonenumber: '1278 7897'
+      image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/choco2.jpg'
+      vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
 
-  Presents.insert
-    location: saiWanId
-    title: 'Strawberry Suits'
-    description: 'Strawberries like a sir!'
-    price: 'HKD 600'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present5.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
+    strawberrySuits:
+      title: 'Strawberry Suits'
+      description: 'Strawberries like a sir!'
+      price: 'HKD 600'
+      vendor: 'Vendor'
+      phonenumber: '1278 7897'
+      image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present5.jpg'
+      vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
 
-  Presents.insert
-    location: sheungWanId
-    title: 'Basket of Fruit'
-    description: 'Sheung Wan tossed'
-    price: 'HKD 100'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present6.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
+    basketOfFruit:
+      title: 'Basket of Fruit'
+      description: 'Sheung Wan tossed'
+      price: 'HKD 100'
+      vendor: 'Vendor'
+      phonenumber: '1278 7897'
+      image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present6.jpg'
+      vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
 
-  Presents.insert
-    location: causewayBayId
-    title: 'Pink Zaku'
-    description: 'Perfect for mecha girls'
-    price: 'HKD 400'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present7.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
+    pinkZaku:
+      title: 'Pink Zaku'
+      description: 'Perfect for mecha girls'
+      price: 'HKD 400'
+      vendor: 'Vendor'
+      phonenumber: '1278 7897'
+      image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present7.jpg'
+      vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
 
-  Presents.insert
-    location: cyberportId
-    title: 'Ring'
-    description: 'Ring Mabelle'
-    price: 'HKD 1400'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring3.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
+    ring:
+      title: 'Ring'
+      description: 'Ring Mabelle'
+      price: 'HKD 1400'
+      vendor: 'Vendor'
+      phonenumber: '1278 7897'
+      image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring3.jpg'
+      vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
 
-  Presents.insert
-    location: chaiWanId
-    title: 'Apple Gift Cards'
-    description: 'For Apple Products'
-    price: 'HKD 1400'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present008.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
+    appleGiftCards:
+      title: 'Apple Gift Cards'
+      description: 'For Apple Products'
+      price: 'HKD 1400'
+      vendor: 'Vendor'
+      phonenumber: '1278 7897'
+      image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present008.jpg'
+      vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
 
-  Presents.insert
-    location: northPointId
-    title: 'Windows Gift Cards'
-    description: 'For the love of blue screeens'
-    price: 'HKD 500'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present009.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
+    windowsGiftCards:
+      title: 'Windows Gift Cards'
+      description: 'For the love of blue screeens'
+      price: 'HKD 500'
+      vendor: 'Vendor'
+      phonenumber: '1278 7897'
+      image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present009.jpg'
+      vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
 
-  Presents.insert
-    location: quarryBayId
-    title: 'Disneyland Tickets'
-    description: 'To the happiest place on Earth'
-    price: 'HKD 1400'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present010.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
+    disneylandTickets:
+      title: 'Disneyland Tickets'
+      description: 'To the happiest place on Earth'
+      price: 'HKD 1400'
+      vendor: 'Vendor'
+      phonenumber: '1278 7897'
+      image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present010.jpg'
+      vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
 
-  Presents.insert
-    location: saiWanHoId
-    title: 'Ocean Park Tickets'
-    description: 'To the wettest place on Earth'
-    price: 'HKD 1300'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present011.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
+    oceanParkTickets:
+      title: 'Ocean Park Tickets'
+      description: 'To the wettest place on Earth'
+      price: 'HKD 1300'
+      vendor: 'Vendor'
+      phonenumber: '1278 7897'
+      image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present011.jpg'
+      vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
 
-  Presents.insert
-    location: shauKeiWanId
-    title: 'LV Bag'
-    description: 'Prestigious Bag'
-    price: 'HKD 16300'
-    vendor: 'Vendor'
-    phonenumber: '1278 7897'
-    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present012.jpg'
-    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
+    lvBag:
+      title: 'LV Bag'
+      description: 'Prestigious Bag'
+      price: 'HKD 16300'
+      vendor: 'Vendor'
+      phonenumber: '1278 7897'
+      image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present012.jpg'
+      vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/ring+logo.jpg'
+
+  Presents.insert _.extend presents.wine,               location: centralId
+  Presents.insert _.extend presents.strawberries,       location: centralId
+  Presents.insert _.extend presents.chocolate,          location: thePeakId
+  Presents.insert _.extend presents.strawberrySuits,    location: thePeakId
+  Presents.insert _.extend presents.basketOfFruit,      location: midLevelId
+  Presents.insert _.extend presents.pinkZaku,           location: midLevelId
+  Presents.insert _.extend presents.ring,               location: saiWanId
+  Presents.insert _.extend presents.appleGiftCards,     location: saiWanId
+  Presents.insert _.extend presents.windowsGiftCards,   location: causewayBayId
+  Presents.insert _.extend presents.disneylandTickets,  location: causewayBayId
+  Presents.insert _.extend presents.oceanParkTickets,   location: cyberportId
+  Presents.insert _.extend presents.lvBag,              location: cyberportId
+  Presents.insert _.extend presents.wine,               location: chaiWanId
+  Presents.insert _.extend presents.strawberrySuits,    location: chaiWanId
+  Presents.insert _.extend presents.basketOfFruit,      location: northPointId
+  Presents.insert _.extend presents.pinkZaku,           location: northPointId
+  Presents.insert _.extend presents.ring,               location: quarryBayId
+  Presents.insert _.extend presents.appleGiftCards,     location: quarryBayId
+  Presents.insert _.extend presents.windowsGiftCards,   location: saiWanHoId
+  Presents.insert _.extend presents.disneylandTickets,  location: saiWanHoId
+  Presents.insert _.extend presents.oceanParkTickets,   location: shauKeiWanId
+  Presents.insert _.extend presents.lvBag,              location: shauKeiWanId
 
 if Dinners.find().count() is 0
 

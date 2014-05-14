@@ -1,4 +1,8 @@
-Template.dinner.events
+Template.showDinner.helpers
+  location: ->
+    Locations.findOne(@location).name
+
+Template.showDinner.events
   'click .dinnerList': (e) ->
     e.preventDefault()
 

@@ -1,11 +1,19 @@
-translateLocationId = (locationId) ->
-  locations = Locations.find().fetch()
-  location = (_.findWhere locations, {_id: locationId}).name
+currentRecommendation = ->
+  targetUser = Session.get 'targetUser'
+  Recommendations.findOne targetId: targetUser
 
-findRecommendation = (recommendationId, location) ->
-  dinner = Dinners.findOne {location: location}
-  anything = Anythings.findOne {location: location}
-  present = Presents.findOne {location: location}
+randomRecommendation = (collection, locationId) ->
+  if !!locationId
+    index = _.random 0, collection.find(location: locationId).count() - 1
+    collection.find(location: locationId).fetch()[index]
+  else
+    index = _.random 0, collection.find().count() - 1
+    collection.find().fetch()[index]
+
+generateRecommendation = (recommendationId, locationId) ->
+  dinner = randomRecommendation Dinners, locationId
+  anything = randomRecommendation Anythings, locationId
+  present = randomRecommendation Presents, locationId
 
   Recommendations.update _id: recommendationId, {$set: { dinnerId: dinner._id, anythingId: anything._id, presentId: present._id }}
 
@@ -32,8 +40,7 @@ Template.editRecommendation.helpers
     Recommendations.find()
 
   chosenPresent: ->
-    targetUser = Session.get 'targetUser'
-    recommendation = Recommendations.findOne targetId: targetUser
+    recommendation = currentRecommendation()
     if recommendation
       if recommendation.presentId
         Presents.findOne recommendation.presentId
@@ -42,8 +49,7 @@ Template.editRecommendation.helpers
 
 
   chosenDinner: ->
-    targetUser = Session.get 'targetUser'
-    recommendation = Recommendations.findOne targetId: targetUser
+    recommendation = currentRecommendation()
     if recommendation
       if recommendation.dinnerId
         Dinners.findOne recommendation.dinnerId
@@ -51,8 +57,7 @@ Template.editRecommendation.helpers
       Dinners.findOne()
 
   chosenAnything: ->
-    targetUser = Session.get 'targetUser'
-    recommendation = Recommendations.findOne targetId: targetUser
+    recommendation = currentRecommendation()
     if recommendation
       if recommendation.anythingId
         Anythings.findOne recommendation.anythingId
@@ -60,13 +65,28 @@ Template.editRecommendation.helpers
       Anythings.findOne()
 
   allPresents: ->
-    Presents.find()
+    recommendation = currentRecommendation()
+    if recommendation
+      if recommendation.locationId
+        Presents.find location: recommendation.locationId
+      else
+        Presents.find()
 
   allDinners: ->
-    Dinners.find()
+    recommendation = currentRecommendation()
+    if recommendation
+      if recommendation.locationId
+        Dinners.find location: recommendation.locationId
+      else
+        Dinners.find()
 
   allAnythings: ->
-    Anythings.find()
+    recommendation = currentRecommendation()
+    if recommendation
+      if recommendation.locationId
+        Anythings.find location: recommendation.locationId
+      else
+        Anythings.find()
 
   showPrevNext: ->
     if Recommendations.find().count() < 2
@@ -76,9 +96,9 @@ Template.editRecommendation.helpers
 
 Template.location.helpers
   selected: ->
-    currentRecommendation = Recommendations.findOne {targetId: Session.get 'targetUser'}
-    if currentRecommendation
-      if currentRecommendation.locationId && currentRecommendation.locationId == @_id
+    recommendation = currentRecommendation()
+    if recommendation
+      if recommendation.locationId && recommendation.locationId == @_id
         'selected'
 
 Template.editRecommendation.events
@@ -101,12 +121,11 @@ Template.editRecommendation.events
     Session.set 'targetUser', Recommendations.find().fetch()[Session.get 'currentIndex'].targetId
 
   'change #location': (e) ->
-    recommendationId = Recommendations.findOne({targetId: Session.get 'targetUser'})._id
+    recommendationId = currentRecommendation()._id
     Recommendations.update _id: recommendationId, {$set: {locationId: $(e.target).val()}}, (error, result) ->
       if error
         console.log 'error: ', error
 
     locationId = Recommendations.findOne({targetId: Session.get 'targetUser'}).locationId
-    location = translateLocationId locationId
 
-    findRecommendation recommendationId, location
+    generateRecommendation recommendationId, locationId
