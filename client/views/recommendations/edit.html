@@ -79,19 +79,19 @@
       <div class="tab-content">
         <div class="tab-pane fade in active" id="presents">
           {{#each allPresents}}
-            {{> present}}
+            {{> showPresent}}
           {{/each}}
         </div>
 
         <div class="tab-pane fade" id="dinners">
           {{#each allDinners}}
-            {{> dinner}}
+            {{> showDinner}}
           {{/each}}
         </div>
 
         <div class="tab-pane fade" id="anythings">
           {{#each allAnythings}}
-            {{> anything}}
+            {{> showAnything}}
           {{/each}}
         </div>
       </div>
