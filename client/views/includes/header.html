@@ -9,14 +9,25 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{pathFor 'main'}}">PDF</a>
+        <a class="navbar-brand" href="{{pathFor 'main'}}">PDA</a>
       </div>
       <div class="navbar-collapse collapse" id="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="{{pathFor 'editRecommendation'}}">Recommendations</a>
-          </li>
-          {{> loginButtons }}
+          {{#if currentUser}}
+            <li>
+              <a href="{{pathFor 'friends'}}">Date friends</a>
+            </li>
+            <li>
+              <a href="{{pathFor 'editRecommendation'}}">Recommendations</a>
+            </li>
+            <li>
+              <a href="#" id="signout">Sign out</a>
+            </li>
+          {{else}}
+            <li>
+              <a href="{{pathFor 'signin'}}" id="signin">Sign in</a>
+            </li>
+          {{/if}}
         </ul>
       </div>
     </div>

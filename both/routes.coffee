@@ -10,12 +10,13 @@ Router.configure
 filters =
   isLoggedIn: (pause) ->
     unless (Meteor.loggingIn() || Meteor.user())
-      throwError 'Please Sign In First.'
-      @render 'signin'
+      throwError 'Please sign in/up first.'
+      @redirect 'signin'
       pause()
   isLoggedOut: (pause) ->
     if Meteor.user()
-      @render 'already_logged_in'
+      throwError 'Already signed in'
+      @redirect '/'
       pause()
   hasRecommendations: (pause) ->
     if @ready()
@@ -25,7 +26,7 @@ filters =
 
 Router.onBeforeAction 'loading'
 Router.onBeforeAction -> clearErrors()
-Router.onBeforeAction filters.isLoggedIn, only: ['main', 'editRecommendation']
+Router.onBeforeAction filters.isLoggedIn, only: ['friends', 'editRecommendation']
 Router.onBeforeAction filters.isLoggedOut, only: ['signin', 'signup']
 Router.onBeforeAction filters.hasRecommendations, only: 'editRecommendation'
 
@@ -33,8 +34,11 @@ Router.map ->
   @route 'main',
     path: '/'
 
+  @route 'friends'
+
   @route 'editRecommendation',
     path: '/recommendations'
 
   @route 'signin'
   @route 'signup'
+  @route 'forgot_password'

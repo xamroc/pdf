@@ -7,10 +7,11 @@ Template.signin.events
       if err
         console.log err
         throwError err.reason
+      Router.go 'friends'
 
   'click #signup': ->
     Router.go '/signup'
 
   'click .facebook-button': ->
     Meteor.loginWithFacebook ->
-      Router.go '/'
+      Router.go 'friends'
