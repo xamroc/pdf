@@ -26,7 +26,7 @@
     </p>
   </div>
 
-  <div class="left-margin">
+  <div class="left-margin row">
     <h1 class="chosen">Chosen</h1>
     <div class= "row chosen-row">
 
@@ -54,10 +54,10 @@
 
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="chosen-item">
-          <img src="{{chosenFlower.image}}" alt="{{chosenFlower.title}}" class="imagelist">
+          <img src="{{chosenAnything.image}}" alt="{{chosenAnything.title}}" class="imagelist">
           <div>
             <p>
-              <span class="chosen-title">{{chosenFlower.title}}</span>
+              <span class="chosen-title">{{chosenAnything.title}}</span>
             </p>
           </div>
         </div>
@@ -65,23 +65,32 @@
     </div>
 
   </div>
-  <div>
-    <div>
-      {{#each allPresents}}
-        {{> present}}
-      {{/each}}
-    </div>
+  <div class="row">
+    <div class="pdatabs">
+      <ul class="nav nav-tabs">
+        <li><a href="#presents" data-toggle="tab">Present</a></li>
+        <li><a href="#dinners" data-toggle="tab">Dinner</a></li>
+        <li><a href="#anythings" data-toggle="tab">Anything else</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="presents">
+          {{#each allPresents}}
+            {{> present}}
+          {{/each}}
+        </div>
 
-    <div>
-      {{#each allDinners}}
-        {{> dinner}}
-      {{/each}}
-    </div>
+        <div class="tab-pane fade" id="dinners">
+          {{#each allDinners}}
+            {{> dinner}}
+          {{/each}}
+        </div>
 
-    <div>
-      {{#each allFlowers}}
-        {{> flower}}
-      {{/each}}
+        <div class="tab-pane fade" id="anythings">
+          {{#each allAnythings}}
+            {{> anything}}
+          {{/each}}
+        </div>
+      </div>
     </div>
   </div>
 </template>

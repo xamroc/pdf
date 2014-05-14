@@ -1,4 +1,4 @@
-preloadSubscriptions = ['recommendations', 'presents', 'dinners', 'flowers', 'locations']
+preloadSubscriptions = ['recommendations', 'presents', 'dinners', 'anythings', 'locations']
 
 Router.configure
   layoutTemplate: 'layout'
@@ -15,7 +15,6 @@ filters =
       pause()
   isLoggedOut: (pause) ->
     if Meteor.user()
-      throwError 'Already signed in'
       @redirect '/'
       pause()
   hasRecommendations: (pause) ->

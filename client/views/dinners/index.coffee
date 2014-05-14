@@ -2,7 +2,7 @@ Template.dinner.events
   'click .dinnerList': (e) ->
     e.preventDefault()
 
-    Dinners.find().fetch()[0]
+    Dinners.findOne()
     dinnerId= @_id
 
     recommendationId = Session.get('targetUser')
