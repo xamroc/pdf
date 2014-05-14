@@ -94,7 +94,17 @@ if Presents.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
 
   Presents.insert
-    location: 'Admiralty'
+    location: 'The Peak'
+    title: 'Strawberries'
+    description: 'A box of strawberries'
+    price: 'HKD 100'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/strawberries.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
+
+  Presents.insert
+    location: 'Mid-level'
     title: 'Chocolate'
     description: 'Aguis Chocolate'
     price: 'HKD 400'
@@ -102,6 +112,36 @@ if Presents.find().count() is 0
     phonenumber: '1278 7897'
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/choco2.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
+
+  Presents.insert
+    location: 'Sai Wan'
+    title: 'Strawberry Suits'
+    description: 'Strawberries like a sir!'
+    price: 'HKD 600'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present5.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
+
+  Presents.insert
+    location: 'Sheung Wan'
+    title: 'Basket of Fruit'
+    description: 'Sheung Wan tossed'
+    price: 'HKD 100'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present6.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/chocologo.png'
+
+  Presents.insert
+    location: 'Causeway Bay'
+    title: 'Pink Zaku'
+    description: 'Perfect for mecha girls'
+    price: 'HKD 400'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/present7.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/winelogo.jpg'
 
   Presents.insert
     location: 'Cyberport'
@@ -126,7 +166,17 @@ if Dinners.find().count() is 0
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner1+logo.png'
 
   Dinners.insert
-    location: 'Admiralty'
+    location: 'The Peak'
+    title: 'Eat at the Top'
+    description: 'Get high for dinner'
+    price: 'HKD 1100'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/restaurant4.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner1+logo.png'
+
+  Dinners.insert
+    location: 'Mid-level'
     title: 'Paisano Pizza'
     description: 'Huge pizza'
     price: 'HKD 200'
@@ -134,6 +184,36 @@ if Dinners.find().count() is 0
     phonenumber: '1278 7897'
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner2.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner2+logo.png'
+
+  Dinners.insert
+    location: 'Sai Wan'
+    title: 'Victor Lin Poultry'
+    description: 'You will find no chicken unbitten here'
+    price: 'HKD 200'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/restaurant5.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner2+logo.png'
+
+  Dinners.insert
+    location: 'Sheung Wan'
+    title: 'K-Roll'
+    description: 'Korean burritos'
+    price: 'HKD 100'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/restaurant6.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3+logo.png'
+
+  Dinners.insert
+    location: 'Causeway Bay'
+    title: 'Shelter'
+    description: 'Skybar for two'
+    price: 'HKD 1200'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/restaurant7.JPG'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3+logo.png'
 
   Dinners.insert
     location: 'Cyberport'
@@ -157,8 +237,18 @@ if Anythings.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
- Anythings.insert
-    location: 'Admiralty'
+  Anythings.insert
+    location: 'The Peak'
+    title: 'Mountain Flower'
+    description: 'Consume the essence of eternal beauty'
+    price: 'HKD 300'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower4.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
+
+  Anythings.insert
+    location: 'Mid-level'
     title: 'Bouvardia'
     description: 'Smell like sweet perfume'
     price: 'HKD 700'
@@ -167,7 +257,37 @@ if Anythings.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2.jpeg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2+logo.png'
 
- Anythings.insert
+  Anythings.insert
+    location: 'Sai Wan'
+    title: 'Vetter Flowers'
+    description: 'One whiff to desire less'
+    price: 'HKD 700'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower5.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2+logo.png'
+
+  Anythings.insert
+    location: 'Sheung Wan'
+    title: 'Flower Crown'
+    description: 'Your majesty'
+    price: 'HKD 600'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower6.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower3+logo.png'
+
+  Anythings.insert
+    location: 'Causeway Bay'
+    title: 'Flower Panda'
+    description: 'The best of both worlds'
+    price: 'HKD 300'
+    vendor: 'Vendor'
+    phonenumber: '1278 7897'
+    image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower7.jpg'
+    vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
+
+  Anythings.insert
     location: 'Cyberport'
     title: 'Lavendar'
     description: 'Twilight mixed flower'
