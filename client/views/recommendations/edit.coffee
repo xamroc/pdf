@@ -38,7 +38,7 @@ Template.editRecommendation.helpers
       if recommendation.presentId
         Presents.findOne recommendation.presentId
     else
-      console.log 'first present: ', Presents.findOne()
+      Presents.findOne()
 
 
   chosenDinner: ->
@@ -48,7 +48,7 @@ Template.editRecommendation.helpers
       if recommendation.dinnerId
         Dinners.findOne recommendation.dinnerId
     else
-      console.log 'first dinner: ', Dinners.findOne()
+      Dinners.findOne()
 
   chosenFlower: ->
     targetUser = Session.get 'targetUser'
@@ -57,7 +57,7 @@ Template.editRecommendation.helpers
       if recommendation.flowerId
         Flowers.findOne recommendation.flowerId
     else
-      console.log 'first flower: ', Flowers.findOne()
+      Flowers.findOne()
 
   allPresents: ->
     Presents.find()
