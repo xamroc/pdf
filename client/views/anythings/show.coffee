@@ -1,4 +1,4 @@
-Template.showAnything.helpers
+Template.anythingModal.helpers
   location: ->
     Locations.findOne(@location).name
 
@@ -16,6 +16,7 @@ Template.showAnything.events
           $("#alert-anything").modal 'hide'
         , 1000
 
+Template.anythingModal.events
   'click .add-anything-modal': (e) ->
     console.log 'e.target', $(e.target)
     anythingId = @_id

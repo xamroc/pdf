@@ -1,9 +1,8 @@
-Template.showDinner.helpers
+Template.dinnerModal.helpers
   location: ->
     Locations.findOne(@location).name
 
 Template.showDinner.events
-
   'click .add-dinner': (e) ->
     console.log 'e.target', $(e.target)
     recommendationId = Session.get('targetUser')
@@ -18,6 +17,7 @@ Template.showDinner.events
           $("#alert-dinner").modal 'hide'
         , 1000
 
+Template.dinnerModal.events
   'click .add-dinner-modal': (e) ->
     console.log 'e.target', $(e.target)
     dinnerId = @_id

@@ -1,9 +1,8 @@
-Template.showPresent.helpers
+Template.presentModal.helpers
   location: ->
     Locations.findOne(@location).name
 
 Template.showPresent.events
-
   'click .add-present': (e) ->
     recommendationId = Session.get('targetUser')
     currentRecommendation = Recommendations.findOne {targetId: recommendationId}
@@ -17,6 +16,7 @@ Template.showPresent.events
           $("#alert-present").modal 'hide'
         , 1000
 
+Template.presentModal.events
   'click .add-present-modal': (e) ->
     console.log 'e.target', $(e.target)
     presentId = @_id
