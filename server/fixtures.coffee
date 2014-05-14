@@ -145,9 +145,9 @@ if Dinners.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/dinner3+logo.png'
 
-if Flowers.find().count() is 0
+if Anythings.find().count() is 0
 
-  Flowers.insert
+  Anythings.insert
     location: 'Central'
     title: 'Rose'
     description: 'Red color'
@@ -157,7 +157,7 @@ if Flowers.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1.jpg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower1+logo.png'
 
- Flowers.insert
+ Anythings.insert
     location: 'Admiralty'
     title: 'Bouvardia'
     description: 'Smell like sweet perfume'
@@ -167,7 +167,7 @@ if Flowers.find().count() is 0
     image: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2.jpeg'
     vendorimage: 'https://s3-ap-southeast-1.amazonaws.com/pdf-giftimage/flower2+logo.png'
 
- Flowers.insert
+ Anythings.insert
     location: 'Cyberport'
     title: 'Lavendar'
     description: 'Twilight mixed flower'

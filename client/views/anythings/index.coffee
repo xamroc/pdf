@@ -1,17 +1,18 @@
-Template.flower.events
-  'click .flowerList': (e) ->
+
+Template.anything.events
+  'click .anythingList': (e) ->
     e.preventDefault()
 
-    Flowers.find().fetch()[0]
-    flowerId= @_id
+    Anythings.findOne()
+    anythingId= @_id
 
     recommendationId = Session.get('targetUser')
     currentRecommendation = Recommendations.findOne {targetId: recommendationId}
 
-    Recommendations.update currentRecommendation._id, {$set: {"flowerId": flowerId}}, (error) ->
+    Recommendations.update currentRecommendation._id, {$set: {"anythingId": anythingId}}, (error) ->
       if error
         console.log 'Error!'
         alert(error.reason)
 
       else
-        alert 'Flower updated!'
+        alert 'anything updated!'

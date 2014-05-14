@@ -2,7 +2,7 @@ Template.present.events
   'click .presentList': (e) ->
     e.preventDefault()
 
-    Presents.find().fetch()[0]
+    Presents.findOne()
     presentId= @_id
 
     recommendationId = Session.get('targetUser')
