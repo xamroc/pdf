@@ -19,5 +19,7 @@ Template.signup.events
     Router.go 'signin'
 
   'click .facebook-button': ->
-    Meteor.loginWithFacebook() ->
+    Meteor.loginWithFacebook
+      requestPermissions: ['email', 'user_friends']
+    , ->
       Router.go 'friends'
