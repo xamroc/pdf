@@ -66,42 +66,40 @@
     </div>
 
   </div>
-  <div class="row">
-    <div class="pdatabs">
-      <ul class="nav nav-tabs">
-        <li><a href="#presents" data-toggle="tab">Present</a></li>
-        <li><a href="#dinners" data-toggle="tab">Dinner</a></li>
-        <li><a href="#anythings" data-toggle="tab">Anything else</a></li>
-      </ul>
-      <div class="tab-content">
-        <div class="tab-pane fade in active row" id="presents">
-          {{#each allPresents}}
-            {{> showPresent}}
-          {{/each}}
-        </div>
-
-        <div class="tab-pane fade" id="dinners">
-          {{#each allDinners}}
-            {{> showDinner}}
-          {{/each}}
-        </div>
-
-        <div class="tab-pane fade" id="anythings">
-          {{#each allAnythings}}
-            {{> showAnything}}
-          {{/each}}
-        </div>
+  <div class="pdatabs">
+    <ul class="nav nav-tabs">
+      <li><a href="#presents" data-toggle="tab">Present</a></li>
+      <li><a href="#dinners" data-toggle="tab">Dinner</a></li>
+      <li><a href="#anythings" data-toggle="tab">Anything else</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade in active row" id="presents">
+        {{#each allPresents}}
+          {{> showPresent}}
+        {{/each}}
       </div>
-      {{#each allPresents}}
-        {{> presentModal}}
-      {{/each}}
-      {{#each allDinners}}
-        {{> dinnerModal}}
-      {{/each}}
-      {{#each allAnythings}}
-        {{> anythingModal}}
-      {{/each}}
+
+      <div class="tab-pane fade" id="dinners">
+        {{#each allDinners}}
+          {{> showDinner}}
+        {{/each}}
+      </div>
+
+      <div class="tab-pane fade" id="anythings">
+        {{#each allAnythings}}
+          {{> showAnything}}
+        {{/each}}
+      </div>
     </div>
+    {{#each allPresents}}
+      {{> presentModal}}
+    {{/each}}
+    {{#each allDinners}}
+      {{> dinnerModal}}
+    {{/each}}
+    {{#each allAnythings}}
+      {{> anythingModal}}
+    {{/each}}
   </div>
 </template>
 

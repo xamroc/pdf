@@ -4,7 +4,6 @@ Template.dinnerModal.helpers
 
 Template.showDinner.events
   'click .add-dinner': (e) ->
-    console.log 'e.target', $(e.target)
     recommendationId = Session.get('targetUser')
     currentRecommendation = Recommendations.findOne {targetId: recommendationId}
     Recommendations.update currentRecommendation._id, {$set: {"dinnerId": @_id}}, (error) ->
@@ -19,7 +18,6 @@ Template.showDinner.events
 
 Template.dinnerModal.events
   'click .add-dinner-modal': (e) ->
-    console.log 'e.target', $(e.target)
     dinnerId = @_id
     recommendationId = Session.get('targetUser')
     currentRecommendation = Recommendations.findOne {targetId: recommendationId}
