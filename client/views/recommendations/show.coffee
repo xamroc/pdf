@@ -3,7 +3,7 @@ Template.showRecommendation.helpers
     Meteor.users.findOne(@targetId)
 
 Template.showRecommendation.events
-  'click .target-name': (e) ->
+  'click .target': (e) ->
     e.preventDefault()
     Session.set 'targetUser', $(@)[0].targetId
     Router.go 'editRecommendation'
