@@ -17,5 +17,5 @@ Template.showRecommendation.events
       else
         friendList = Meteor.user().profile.friendList
         friendList.push targetId
-        throwError 'Deleted date'
+        throwError 'Aww, what happened dear? Anyway, deleted date successfully!'
         Meteor.users.update Meteor.user()._id, $set: { "profile.friendList": friendList }
