@@ -69,10 +69,6 @@ $lightgray      : #F4F4F4;
   }
 }
 
-.location {
-  float: right;
-}
-
 .recommendation-info {
   padding-left: 3%;
   padding-right: 3%;
@@ -215,3 +211,33 @@ $lightgray      : #F4F4F4;
 // div {
 //   border: 1px solid black;
 // }
+
+// Tab Modal
+
+.modal-description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #F4F4F4;
+  padding-bottom: 10px;
+}
+
+.glyphicon-map-marker, .glyphicon-earphone, .glyphicon-tags {
+  color: $bgDefault;
+  margin-right: 8px;
+}
+
+.info {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.modal-vendor, .modal-phonenumber, .modal-price, .modal-location {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.btn-modal-add {
+  background-color: $red;
+  color: white;
+  margin-top: 20px;
+}
