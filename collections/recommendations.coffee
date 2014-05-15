@@ -5,3 +5,5 @@ Recommendations.allow
     userId == Meteor.userId()
   update: (userId, doc, fields, modifier) ->
     true
+  remove: ->
+    true
