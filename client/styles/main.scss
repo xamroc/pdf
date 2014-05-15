@@ -154,7 +154,7 @@ p {
   border-color: white;
   width: 100%;
 }
->>>>>>> Stashed changes
+
 #spinner { height: 300px }
 
 // For friends autocomplete
@@ -162,3 +162,18 @@ p {
   border-color: $bgDefault;
   height: 44px;
 }
+
+// For friends index.html
+
+.btn-plan-div {
+  padding-top: 150px;
+}
+
+.btn-plan {
+  border-radius: 2px;
+  background: $bgDefault;
+  border: 1px solid $bgDefault;
+  display: block;
+  margin: 2%;
+}
+
