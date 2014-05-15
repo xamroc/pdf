@@ -10,6 +10,7 @@ Template.showRecommendation.events
 
   'click .remove-recommendation': (e) ->
     e.preventDefault()
+    targetId = @targetId
     Recommendations.remove @_id, (error, result) ->
       if error
         console.log error
