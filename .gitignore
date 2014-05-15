@@ -1,4 +1,5 @@
 .meteor/local
 .meteor/meteorite
 secret.json
+secret_live.json
 img
