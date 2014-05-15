@@ -4,7 +4,9 @@
     {{> inputAutocomplete settings=settings class="form-control" placeholder="Type name here"}}
   </div>
     {{> recommendations }}
-  <a href="{{pathFor 'editRecommendation'}}" class="btn btn-lg btn-primary">
-    Plan dates
-  </a>
+  <div class="btn-plan-div">
+    <a href="{{pathFor 'editRecommendation'}}" class="btn btn-lg btn-primary btn-plan">
+      Plan dates
+    </a>
+  </div>
 </template>
