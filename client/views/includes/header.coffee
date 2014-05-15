@@ -5,4 +5,3 @@ Template.header.events
   'click #nav-signin': (e) ->
     el = document.getElementById 'main'
     el.scrollIntoView true
-

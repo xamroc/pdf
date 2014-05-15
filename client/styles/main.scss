@@ -41,8 +41,9 @@ p {
 }
 
 #homepage-intro {
+  // mauve hsla(276, 100%, 55%, 1)
   background: linear-gradient(
-    hsla(276, 100%, 55%, 1), hsla(276, 100%, 90%, 1) 90%, $lightgray);
+    hsla(347, 100%, 80%, 1), hsla(347, 100%, 90%, 1) 90%, $lightgray);
   text-align: center;
   padding-top: 60px;
   padding-bottom: 70px;
