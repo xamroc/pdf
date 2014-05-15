@@ -37,4 +37,7 @@
       </div>
     </div>
   </nav>
+  {{#unless currentUser}}
+    {{> static}}
+  {{/unless}}
 </template>
