@@ -28,16 +28,28 @@
         </div>
         <div class="modal-body">
           <img src="{{image}}" alt="{{title}}" class="imagelist">
-          <div class="recommendation-info">
+                    <div class="recommendation-info">
             <h4><img src="{{vendorimage}}" alt="{{vendor}}" class="vendorlist img-circle">
-            <span class="vendor">{{vendor}}</span></h4>
-            <span class="description">{{description}}</span>
-            <span class="price">{{price}}</span>
-            <span class="location">{{location}}</span>
-            <span class="phonenumber">Tel: {{phonenumber}}</span>
-            <button type="button" class="add-dinner-modal in-modal btn btn-xs btn-add dinnerList">
-              <span class="glyphicon glyphicon-ok"></span> Add
-            </button>
+            <span class="modal-vendor">{{vendor}}</span></h4>
+            <div class="modal-description">{{description}}</div>
+
+            <div class="info col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="info col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <span class="glyphicon glyphicon-tags"></span><span class="modal-price">{{price}}</span>
+              </div>
+              <div class="info col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <span class="glyphicon glyphicon-map-marker"></span><span class="modal-location">{{location}}</span></div>
+              <div class="info col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <span class="glyphicon glyphicon-earphone"></span><span class="modal-phonenumber">{{phonenumber}}</span>
+              </div>
+            </div>
+
+            <div class="info col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <button type="button" class="add-present-modal btn btn-modal-add presentList col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="glyphicon glyphicon-ok"></span> Add
+              </button>
+            </div>
+
           </div>
         </div>
       </div>
