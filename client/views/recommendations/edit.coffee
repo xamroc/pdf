@@ -12,6 +12,8 @@ resetIsotopes = (ids) ->
   destroyIsotopes(ids)
   loadIsotopes(ids)
 
+# Section of Marco's Code
+
 currentRecommendation = ->
   targetUser = Session.get 'targetUser'
   Recommendations.findOne targetId: targetUser
@@ -128,6 +130,8 @@ Template.location.helpers
     if recommendation
       if recommendation.locationId && recommendation.locationId == @_id
         'selected'
+
+# until here.
 
 changeDatingTarget = (direction) ->
   currentIndex = Session.get 'currentIndex'

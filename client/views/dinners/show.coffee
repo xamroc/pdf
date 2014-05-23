@@ -1,3 +1,5 @@
+# Marco's Code
+
 Template.dinnerModal.helpers
   location: ->
     Locations.findOne(@location).name

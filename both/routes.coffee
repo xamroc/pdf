@@ -1,3 +1,5 @@
+# Section of Marco's Code
+
 preloadSubscriptions = ['recommendations', 'presents', 'dinners', 'anythings', 'locations']
 
 Router.configure
@@ -6,6 +8,8 @@ Router.configure
   waitOn: ->
     _.map preloadSubscriptions, (sub) ->
       Meteor.subscribe sub
+
+# until here.
 
 filters =
   isLoggedIn: (pause) ->
@@ -22,6 +26,8 @@ filters =
       if Recommendations.find().count() is 0
         @redirect '/'
         throwError 'Please add friends to date list'
+
+# Section of Marco's Code
 
 Router.onBeforeAction 'loading'
 Router.onBeforeAction -> clearErrors()
@@ -41,3 +47,5 @@ Router.map ->
   @route 'signin'
   @route 'signup'
   @route 'forgot_password'
+
+# until here.

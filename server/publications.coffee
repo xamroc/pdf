@@ -1,3 +1,5 @@
+# Marco's Code
+
 Meteor.publish "recommendations", ->
   recommendationsCursor = Recommendations.find(userId: @userId)
   datedFriendsIds = recommendationsCursor.fetch().map (recommendation) ->
@@ -13,6 +15,8 @@ Meteor.publish "dinners", ->
 
 Meteor.publish 'anythings', ->
   Anythings.find()
+
+# until here.
 
 Meteor.publish 'availableFriends', (selector, options) ->
   collection = Meteor.users

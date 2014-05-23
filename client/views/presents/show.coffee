@@ -1,3 +1,5 @@
+# Marco's Code
+
 Template.presentModal.helpers
   location: ->
     Locations.findOne(@location).name
